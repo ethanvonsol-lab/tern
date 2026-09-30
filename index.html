@@ -5,35 +5,43 @@
   ============================================================================
   TAYLORMADE WARDROBES — landing page
   ----------------------------------------------------------------------------
-  BEFORE THIS GOES LIVE, replace every placeholder below. Search this file for:
+  PULLED FROM THE CURRENT SITE (taylormadewardrobes.co.nz) AND WORKED IN:
+    Phone 021 941 449 · mark.tmwardrobes@gmail.com
+    Unit 4/58 Anzac Road, Browns Bay, Auckland 0630
+    Services: walk-in wardrobes, sliding doors, bifold doors, accessory drawers,
+              garage storage, office storage
+    Logo + all project photos (loaded from your Wix media library — see note below)
+    Legal name from the Companies Register: Taylormade Wardrobes Limited
 
-    09 XXX XXXX / +649XXXXXXX   -> your real phone number (display / tel: link)
-    hello@taylormadewardrobes.co.nz -> your real email (if different)
-    [Client name] / [Suburb]    -> REAL Google/Facebook reviews only (NZ Fair
-                                   Trading Act: fabricated reviews = misleading
-                                   conduct. Do not ship the sample quotes.)
-    GOOGLE_REVIEWS_URL          -> link to your Google Business Profile reviews
-    FACEBOOK_URL / INSTAGRAM_URL-> your socials (also in the JSON-LD "sameAs")
-    FORM_ENDPOINT               -> e.g. https://formspree.io/f/xxxxxx  (leave ""
-                                   to fall back to opening the visitor's email app)
-    PRICING (in the <script>)   -> set to YOUR real price-per-metre ranges or
-                                   the estimator will quote numbers you can't honour.
+  STILL TO DO BEFORE GOING LIVE:
+    1. PHOTOS/LOGO: they currently load from static.wixstatic.com. They work, but they
+       DIE if you cancel Wix. Download the originals from Wix > Media, put them in an
+       /images folder and swap the URLs (CONFIG.PHOTOS, CONFIG.LOGO_URL, and the
+       <img> tags in the "What we build" section).
+    2. REVIEWS: the reviews section is hidden (it has the `hidden` attribute). Paste in
+       REAL Google/Facebook reviews, then delete `hidden`. Never publish made-up ones.
+    3. FORM_ENDPOINT: leave "" and the form opens the customer's email app addressed to
+       you. Set a Formspree/Getform URL so leads land in your inbox with no extra click.
+    4. PRICING (in the <script>): set to YOUR real price-per-metre ranges.
+    5. Your current site's social icons link to Wix's own Facebook/Instagram, not yours.
+       If you have real pages, add them to the footer and the JSON-LD "sameAs".
+    6. Colours: your current site is plain black / light grey with no brand colour,
+       so this page uses black + gold. Change --brass / --oak / --ink in :root to rebrand.
 
   Claims to double-check are TRUE for your business (delete any that aren't):
-    "Free in-home design consult", "Fixed-price quote", "Installed by our own
-    team", "Soft-close hardware as standard", "Written workmanship guarantee",
-    service areas list, linen/garage storage offering.
+    "Free in-home design consult", "Fixed-price quote", "Soft-close hardware as
+    standard", "Written workmanship guarantee", service areas list.
   ============================================================================
 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Custom Wardrobes Auckland | Walk-in &amp; Sliding Doors | Taylormade Wardrobes</title>
-<meta name="description" content="Custom wardrobes made to measure in Auckland. Walk-in wardrobes, reach-in wardrobes, sliding wardrobe doors &amp; interiors — 30+ years' experience. Free in-home design consult &amp; fixed-price quote.">
+<title>Custom Wardrobes North Shore &amp; Auckland | Taylormade Wardrobes</title>
+<meta name="description" content="Custom wardrobes made to measure in Browns Bay, the North Shore &amp; across Auckland. Walk-in wardrobes, sliding &amp; bifold doors, garage and office storage — 30+ years' experience. Free in-home design consult &amp; fixed-price quote.">
 <link rel="canonical" href="https://www.taylormadewardrobes.co.nz/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#121010">
 <meta name="geo.region" content="NZ-AUK">
-<meta name="geo.placename" content="Auckland">
+<meta name="geo.placename" content="Browns Bay, Auckland">
 
 <!-- Open Graph / social -->
 <meta property="og:type" content="website">
@@ -42,7 +50,7 @@
 <meta property="og:title" content="Custom Wardrobes Auckland — Made to Measure | Taylormade Wardrobes">
 <meta property="og:description" content="Walk-in, reach-in and sliding door wardrobes designed around how you live. 30+ years' experience. Get a free design consult and fixed-price quote.">
 <meta property="og:url" content="https://www.taylormadewardrobes.co.nz/">
-<meta property="og:image" content="https://www.taylormadewardrobes.co.nz/og-image.jpg">
+<meta property="og:image" content="https://static.wixstatic.com/media/c48b62_2a73076e406b489db61dda6f0be4074d~mv2.jpg/v1/fill/w_1200,h_630,al_c,q_85,enc_auto/c48b62_2a73076e406b489db61dda6f0be4074d~mv2.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23121010'/%3E%3Crect x='15' y='12' width='34' height='40' rx='3' fill='none' stroke='%23c9a35a' stroke-width='3'/%3E%3Cline x1='32' y1='12' x2='32' y2='52' stroke='%23c9a35a' stroke-width='3'/%3E%3Cline x1='28' y1='28' x2='28' y2='36' stroke='%23c9a35a' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='36' y1='28' x2='36' y2='36' stroke='%23c9a35a' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
@@ -58,19 +66,26 @@
   "@type": "HomeAndConstructionBusiness",
   "@id": "https://www.taylormadewardrobes.co.nz/#business",
   "name": "Taylormade Wardrobes",
+  "legalName": "Taylormade Wardrobes Limited",
   "url": "https://www.taylormadewardrobes.co.nz/",
-  "image": "https://www.taylormadewardrobes.co.nz/og-image.jpg",
-  "description": "Custom made-to-measure wardrobes in Auckland: walk-in wardrobes, reach-in wardrobes, sliding wardrobe doors and wardrobe interiors. Over 30 years' experience.",
-  "telephone": "+649XXXXXXX",
-  "email": "hello@taylormadewardrobes.co.nz",
+  "image": "https://static.wixstatic.com/media/c48b62_2a73076e406b489db61dda6f0be4074d~mv2.jpg/v1/fill/w_1200,h_630,al_c,q_85,enc_auto/c48b62_2a73076e406b489db61dda6f0be4074d~mv2.jpg",
+  "logo": "https://static.wixstatic.com/media/c48b62_d433c4586084418fa337af70986a0668~mv2.png",
+  "description": "Custom made-to-measure wardrobes in Auckland: walk-in wardrobes, sliding and bifold wardrobe doors, accessory drawers, garage storage and office storage. Over 30 years' experience.",
+  "telephone": "+64 21 941 449",
+  "email": "mark.tmwardrobes@gmail.com",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Auckland",
+    "streetAddress": "Unit 4, 58 Anzac Road",
+    "addressLocality": "Browns Bay",
+    "postalCode": "0630",
     "addressRegion": "Auckland",
     "addressCountry": "NZ"
   },
   "areaServed": [
+    {"@type": "Place", "name": "Browns Bay"},
+    {"@type": "Place", "name": "Albany"},
+    {"@type": "Place", "name": "Takapuna"},
     {"@type": "City", "name": "Auckland"},
     {"@type": "Place", "name": "North Shore"},
     {"@type": "Place", "name": "West Auckland"},
@@ -84,10 +99,11 @@
     "name": "Custom wardrobe services",
     "itemListElement": [
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Walk-in wardrobes", "areaServed": "Auckland"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Reach-in wardrobes", "areaServed": "Auckland"}},
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sliding wardrobe doors", "areaServed": "Auckland"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wardrobe interiors and fit-outs", "areaServed": "Auckland"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Linen and storage cupboards", "areaServed": "Auckland"}}
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bifold wardrobe doors", "areaServed": "Auckland"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wardrobe accessory drawers and interiors", "areaServed": "Auckland"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Garage storage", "areaServed": "Auckland"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Office storage", "areaServed": "Auckland"}}
     ]
   }
 }
@@ -105,8 +121,8 @@
      "acceptedAnswer": {"@type": "Answer", "text": "A walk-in suits a dedicated room or a large alcove of roughly 1.5 m deep or more. A reach-in makes the most of a standard wardrobe recess. We will measure your space and show you both options if both fit."}},
     {"@type": "Question", "name": "Can you replace just the wardrobe doors or just the interior?",
      "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. We regularly replace tired sliding doors, or keep your existing doors and rebuild the interior with drawers, shelving, shoe storage and double hanging."}},
-    {"@type": "Question", "name": "What areas of Auckland do you service?",
-     "acceptedAnswer": {"@type": "Answer", "text": "We work right across Auckland including Central Auckland, the North Shore, West Auckland, East Auckland, South Auckland and the Hibiscus Coast."}},
+    {"@type": "Question", "name": "Where are you based, and what areas do you cover?",
+     "acceptedAnswer": {"@type": "Answer", "text": "We are based in Browns Bay on the North Shore and work right across Auckland, including Central Auckland, the North Shore, West Auckland, East Auckland, South Auckland and the Hibiscus Coast."}},
     {"@type": "Question", "name": "How long does it take from quote to install?",
      "acceptedAnswer": {"@type": "Answer", "text": "Lead times vary with the season and the size of the job. You will get a firm install date with your quote, and most individual wardrobes are installed with minimal disruption to your home."}},
     {"@type": "Question", "name": "Do you work with builders and new builds?",
@@ -425,33 +441,30 @@ p{margin:0 0 1em}
 .card h3{margin:40px 0 12px}
 .card p{color:var(--muted); margin:0 0 20px; max-width:44ch}
 .card .link-arrow{align-self:flex-start; font-size:15px}
+
 .card .glow{position:absolute; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle, rgba(201,163,90,.28), transparent 65%); left:var(--mx, 50%); top:var(--my, 50%); transform:translate(-50%,-50%); opacity:0; transition:opacity .4s; pointer-events:none; z-index:-1}
 .card:hover .glow{opacity:1}
-.c-walk{grid-column:span 4; grid-row:span 2; background:var(--ink); color:var(--paper); border-color:transparent}
-.c-walk p{color:var(--muted-d)}
-.c-walk .ic{background:var(--brass); color:var(--ink)}
+.c-walk{grid-column:span 4; grid-row:span 2}
+.c-sq{grid-column:span 2}
+.card.photo{color:var(--paper); background:var(--ink); border-color:transparent; justify-content:flex-end; min-height:300px}
+.card.photo img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2; transform:scale(1.04); transition:transform 1.4s var(--ease)}
+.card.photo:hover img{transform:scale(1.1)}
+.card.photo::after{content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(180deg, rgba(18,16,16,0) 25%, rgba(18,16,16,.55) 55%, rgba(18,16,16,.92) 100%)}
+.card.photo .ic{position:absolute; top:22px; left:22px; background:rgba(18,16,16,.55); color:var(--brass); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); margin:0}
+.card.photo h3{margin:0 0 10px}
+.card.photo p{color:rgba(247,242,234,.82); margin-bottom:16px}
+.card.photo .link-arrow{color:var(--brass)}
 .c-walk h3{font-size:clamp(34px, 3.6vw, 52px)}
-.c-reach{grid-column:span 2}
-.c-doors{grid-column:span 2}
-.c-int{grid-column:span 3}
-.c-linen{grid-column:span 3}
-.walk-art{position:absolute; right:-40px; top:-20px; width:62%; height:78%; opacity:.9; z-index:-1}
-.walk-art .shelves{position:absolute; inset:0; display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; transform:perspective(900px) rotateY(-18deg) rotateX(4deg); transform-origin:right}
-.walk-art .bay{border-radius:6px; background:linear-gradient(#2f2923,#221d19); box-shadow:inset 0 0 0 1px rgba(255,255,255,.05); position:relative; overflow:hidden}
-.walk-art .bay::before{content:""; position:absolute; inset:0 0 auto; height:45%; background:radial-gradient(ellipse at top, rgba(255,210,140,.35), transparent 70%)}
-.walk-art .bay i{position:absolute; left:10%; right:10%; height:3px; background:#6a5645}
-.walk-art .bay b{position:absolute; top:14%; left:12%; right:12%; display:flex; gap:3px}
-.walk-art .bay b u{flex:1; height:var(--h); background:var(--c); border-radius:5px 5px 2px 2px; text-decoration:none; opacity:.9}
 .c-walk .wk-tag{display:inline-flex; gap:8px; align-items:center; margin-top:8px; font-size:13px; font-weight:700; color:var(--brass); letter-spacing:.06em}
 @media (max-width:1000px){
   .bento{grid-template-columns:repeat(2, 1fr)}
   .c-walk{grid-column:span 2; grid-row:auto; min-height:460px}
-  .c-reach,.c-doors,.c-int,.c-linen{grid-column:span 1}
+  .c-sq{grid-column:span 1}
 }
 @media (max-width:640px){
   .bento{grid-template-columns:1fr}
-  .c-walk,.c-reach,.c-doors,.c-int,.c-linen{grid-column:auto}
-  .walk-art{width:80%; opacity:.35}
+  .c-walk,.c-sq{grid-column:auto}
+  .card.photo{min-height:340px}
 }
 
 /* =========================================================================
@@ -581,6 +594,23 @@ p{margin:0 0 1em}
 @media (max-width:900px){ .styles{grid-template-columns:1fr 1fr} }
 @media (max-width:560px){ .styles{grid-template-columns:1fr} .style{aspect-ratio:5/4} .style .front{inset:8% 22% 26%} .style .inside{inset:calc(8% + 6px) calc(22% + 6px) calc(26% + 6px)} }
 @media (hover:none){ .style .go{opacity:1; transform:none} }
+
+/* =========================================================================
+   RECENT INSTALLS
+   ========================================================================= */
+.gal{display:grid; grid-template-columns:repeat(3, 1fr); grid-auto-rows:260px; gap:16px}
+.gal figure{margin:0; position:relative; overflow:hidden; border-radius:var(--r-lg); background:var(--ink-3)}
+.gal figure.more{display:none}
+.gal.all figure.more{display:block}
+#installs .cmp-foot p{color:var(--paper)}
+.gal figure:nth-child(5n+1){grid-row:span 2}
+.gal img{width:100%; height:100%; object-fit:cover; transform:scale(1.08); transition:transform 1.4s var(--ease)}
+.gal figure.in img, .gal figure:hover img{transform:scale(1)}
+.gal figure:hover img{transform:scale(1.04)}
+.gal figcaption{position:absolute; left:14px; bottom:14px; padding:8px 14px; border-radius:999px; background:rgba(18,16,16,.72); color:var(--paper); font-size:13px; font-weight:700; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px)}
+.logo-img{height:44px; width:auto}
+@media (max-width:900px){ .gal{grid-template-columns:1fr 1fr; grid-auto-rows:200px} }
+@media (max-width:520px){ .gal{grid-template-columns:1fr} .gal figure:nth-child(5n+1){grid-row:auto} }
 
 /* =========================================================================
    REVIEWS
@@ -802,9 +832,9 @@ p{margin:0 0 1em}
       <a href="#styles">Styles</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="nav-phone" href="tel:+649XXXXXXX" data-track="call_nav">
+    <a class="nav-phone" href="tel:+6421941449" data-track="call_nav">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-      <span>09 XXX XXXX</span>
+      <span>021 941 449</span>
     </a>
     <a href="#quote" class="btn magnetic" data-track="cta_nav">Free quote <span class="arr"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
     <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu"><span></span><span></span></button>
@@ -818,7 +848,7 @@ p{margin:0 0 1em}
   <a class="big" href="#styles">Styles</a>
   <a class="big" href="#faq">FAQ</a>
   <a href="#quote" class="btn btn-lg btn-block">Get my free quote <span class="arr">→</span></a>
-  <a href="tel:+649XXXXXXX" class="btn btn-ghost btn-block" style="margin-top:10px">Call 09 XXX XXXX</a>
+  <a href="tel:+6421941449" class="btn btn-ghost btn-block" style="margin-top:10px">Call 021 941 449</a>
 </div>
 
 <main id="main">
@@ -829,10 +859,10 @@ p{margin:0 0 1em}
   <div class="wrap hero-grid">
     <div>
       <h1 class="split" data-reveal>
-        <span class="kw">Custom wardrobes · Auckland</span>
+        <span class="kw">Custom wardrobes · North Shore &amp; Auckland</span>
         Made to measure. <em>To the millimetre.</em>
       </h1>
-      <p class="lede" data-reveal style="--d:.35s">Walk-in wardrobes, reach-in wardrobes and sliding doors designed around the way you actually live — then built and installed by a team with <strong style="color:var(--paper)">over 30 years in the trade</strong>. Free in-home design consult. Fixed-price quote. No surprises.</p>
+      <p class="lede" data-reveal style="--d:.35s">Walk-in wardrobes, sliding and bifold doors, garage and office storage — designed around the way you actually live — then built and installed by a North Shore team with <strong style="color:var(--paper)">over 30 years in the trade</strong>. Free in-home design consult. Fixed-price quote. No surprises.</p>
       <div class="hero-ctas" data-reveal style="--d:.5s">
         <a href="#quote" class="btn btn-lg magnetic" data-track="cta_hero">Get my free design &amp; quote <span class="arr"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
         <a href="#estimate" class="btn btn-lg btn-ghost magnetic" data-track="cta_hero_est">See what it costs <span class="arr"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 6h10M7 2l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
@@ -868,8 +898,8 @@ p{margin:0 0 1em}
 <!-- ============================ MARQUEE ============================ -->
 <div class="marquee" aria-label="Areas we service">
   <div class="marquee-track">
-    <span>Central Auckland</span><span>North Shore</span><span>Remuera</span><span>Ponsonby</span><span>West Auckland</span><span>East Auckland</span><span>Howick</span><span>Albany</span><span>South Auckland</span><span>Hibiscus Coast</span><span>Mt Eden</span><span>Takapuna</span>
-    <span aria-hidden="true">Central Auckland</span><span aria-hidden="true">North Shore</span><span aria-hidden="true">Remuera</span><span aria-hidden="true">Ponsonby</span><span aria-hidden="true">West Auckland</span><span aria-hidden="true">East Auckland</span><span aria-hidden="true">Howick</span><span aria-hidden="true">Albany</span><span aria-hidden="true">South Auckland</span><span aria-hidden="true">Hibiscus Coast</span><span aria-hidden="true">Mt Eden</span><span aria-hidden="true">Takapuna</span>
+    <span>Browns Bay</span><span>Torbay</span><span>Mairangi Bay</span><span>Albany</span><span>Takapuna</span><span>Devonport</span><span>Glenfield</span><span>Orewa</span><span>Whangaparaoa</span><span>Central Auckland</span><span>West Auckland</span><span>East Auckland</span>
+    <span aria-hidden="true">Browns Bay</span><span aria-hidden="true">Torbay</span><span aria-hidden="true">Mairangi Bay</span><span aria-hidden="true">Albany</span><span aria-hidden="true">Takapuna</span><span aria-hidden="true">Devonport</span><span aria-hidden="true">Glenfield</span><span aria-hidden="true">Orewa</span><span aria-hidden="true">Whangaparaoa</span><span aria-hidden="true">Central Auckland</span><span aria-hidden="true">West Auckland</span><span aria-hidden="true">East Auckland</span>
   </div>
 </div>
 
@@ -983,57 +1013,53 @@ p{margin:0 0 1em}
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow" data-reveal>What we build</span>
-      <h2 class="split" data-reveal>Custom wardrobes for <em>every room</em> in the house.</h2>
-      <p class="lede muted" data-reveal style="--d:.2s">From a single bedroom reach-in to a full walk-in dressing room, every Taylormade wardrobe is designed, built and installed for your exact space.</p>
+      <h2 class="split" data-reveal>Custom storage for <em>every room</em> in the house.</h2>
+      <p class="lede muted" data-reveal style="--d:.2s">From a full walk-in dressing room to a garage you can finally park in, everything we build is a tailored storage solution, built with a focus on quality and detail for your exact space.</p>
     </div>
 
     <div class="bento">
-      <article class="card c-walk" data-tilt data-reveal>
-        <span class="glow"></span>
-        <div class="walk-art" aria-hidden="true">
-          <div class="shelves">
-            <div class="bay"><b><u style="--h:90px;--c:#c7b299"></u><u style="--h:120px;--c:#2e3a4a"></u><u style="--h:100px;--c:#6b7b5e"></u></b><i style="bottom:30%"></i><i style="bottom:12%"></i></div>
-            <div class="bay"><i style="top:25%"></i><i style="top:45%"></i><i style="top:65%"></i><i style="top:85%"></i></div>
-            <div class="bay"><b><u style="--h:140px;--c:#1f1f22"></u><u style="--h:110px;--c:#8c3b2e"></u></b><i style="bottom:14%"></i></div>
-          </div>
-        </div>
+      <article class="card photo c-walk" data-tilt data-reveal style="--d:0s">
+        <img src="https://static.wixstatic.com/media/c48b62_2a73076e406b489db61dda6f0be4074d~mv2.jpg/v1/fill/w_1400,h_1100,al_c,q_85,enc_auto/c48b62_2a73076e406b489db61dda6f0be4074d~mv2.jpg" alt="Custom walk-in wardrobe built by Taylormade Wardrobes" loading="lazy" decoding="async">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v17M3 21h18M8 7h8M12 3v18"/></svg></span>
         <span class="wk-tag">★ MOST REQUESTED</span>
         <h3>Walk-in Wardrobes</h3>
-        <p>Your own boutique at home. Open shelving, lit hanging, drawer banks, islands and a place for absolutely everything — laid out around how you get ready.</p>
-        <a href="#quote" class="link-arrow" data-prefill="walkin" style="color:var(--brass)">Design my walk-in →</a>
+        <p>Your own boutique at home. Open shelving, hanging, drawer banks and a place for absolutely everything — laid out around how you get ready.</p>
+        <a href="#quote" class="link-arrow" data-prefill="walkin">Design my walk-in →</a>
       </article>
-
-      <article class="card c-reach" data-tilt data-reveal style="--d:.08s">
-        <span class="glow"></span>
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M10 11v3M14 11v3"/></svg></span>
-        <h3>Reach-in Wardrobes</h3>
-        <p>Squeeze every usable centimetre out of the recess you've already got.</p>
-        <a href="#quote" class="link-arrow" data-prefill="reachin">Get a price →</a>
-      </article>
-
-      <article class="card c-doors" data-tilt data-reveal style="--d:.16s">
-        <span class="glow"></span>
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="10" height="18" rx="1"/><rect x="11" y="3" width="10" height="18" rx="1"/><path d="M7 21h10"/></svg></span>
-        <h3>Sliding Wardrobe Doors</h3>
-        <p>Whisper-quiet sliders in mirror, glass, timber-look or colour. New builds or replacing tired old doors.</p>
+      <article class="card photo c-sq" data-tilt data-reveal style="--d:.08s">
+        <img src="https://static.wixstatic.com/media/c48b62_89330ab4c70b4a0ebdd98bdea5a3de6b~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_auto/c48b62_89330ab4c70b4a0ebdd98bdea5a3de6b~mv2.jpg" alt="Sliding wardrobe door with mirror insert" loading="lazy" decoding="async">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="10" height="18" rx="1"/><rect x="11" y="3" width="10" height="18" rx="1"/></svg></span>
+        <h3>Sliding Doors</h3>
+        <p>Smooth, quiet sliders — mirror inserts, timber-look or colour. New or replacing tired old doors.</p>
         <a href="#quote" class="link-arrow" data-prefill="doors">Get a price →</a>
       </article>
-
-      <article class="card c-int" data-tilt data-reveal style="--d:.08s">
-        <span class="glow"></span>
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M3 15h18M12 9v12"/></svg></span>
-        <h3>Wardrobe Interiors &amp; Fit-outs</h3>
-        <p>Keep your doors, upgrade what's behind them: drawers, shoe racks, pull-out trouser racks, double hanging, the lot.</p>
+      <article class="card photo c-sq" data-tilt data-reveal style="--d:.16s">
+        <img src="https://static.wixstatic.com/media/c48b62_252d8d7da402454087e4945206374ce0~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_auto/c48b62_252d8d7da402454087e4945206374ce0~mv2.jpg" alt="Bifold wardrobe doors by Taylormade Wardrobes" loading="lazy" decoding="async">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 3v18l5-2V5zM9 5l5-2v18l-5-2M14 3h6v18h-6"/></svg></span>
+        <h3>Bifold Doors</h3>
+        <p>Full access to the whole wardrobe at once — perfect where a slider won't fit.</p>
+        <a href="#quote" class="link-arrow" data-prefill="doors">Get a price →</a>
+      </article>
+      <article class="card photo c-sq" data-tilt data-reveal style="--d:.08s">
+        <img src="https://static.wixstatic.com/media/c48b62_cd9f0726889b459bbc564e9ce777598f~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_auto/c48b62_cd9f0726889b459bbc564e9ce777598f~mv2.jpg" alt="Wardrobe accessory drawers built by Taylormade Wardrobes" loading="lazy" decoding="async">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M3 15h18M10 6h4M10 12h4M10 18h4"/></svg></span>
+        <h3>Accessory Drawers</h3>
+        <p>Drawers for watches, jewellery, belts and ties — everything with its own spot.</p>
         <a href="#quote" class="link-arrow" data-prefill="interior">Upgrade my interior →</a>
       </article>
-
-      <article class="card c-linen" data-tilt data-reveal style="--d:.16s">
-        <span class="glow"></span>
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 3h16v18H4zM4 8h16M4 13h16M4 18h16"/></svg></span>
-        <h3>Linen, Hallway &amp; Storage</h3>
-        <p>Linen cupboards, entryway and under-stair storage built with the same care as our wardrobes.</p>
-        <a href="#quote" class="link-arrow" data-prefill="multiple">Talk to us →</a>
+      <article class="card photo c-sq" data-tilt data-reveal style="--d:.16s">
+        <img src="https://static.wixstatic.com/media/c48b62_a05a4de8869b419582d8c9c9ee150bed~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_auto/c48b62_a05a4de8869b419582d8c9c9ee150bed~mv2.jpg" alt="Custom garage storage by Taylormade Wardrobes" loading="lazy" decoding="async">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8M7 17h10"/></svg></span>
+        <h3>Garage Storage</h3>
+        <p>Get the tools, bikes and boxes off the floor and the car back in the garage.</p>
+        <a href="#quote" class="link-arrow" data-prefill="storage">Sort my garage →</a>
+      </article>
+      <article class="card photo c-sq" data-tilt data-reveal style="--d:.24s">
+        <img src="https://static.wixstatic.com/media/c48b62_55ec51eb132b43b1bb77442dd215c2da~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_auto/c48b62_55ec51eb132b43b1bb77442dd215c2da~mv2.jpg" alt="Custom office storage by Taylormade Wardrobes" loading="lazy" decoding="async">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M12 16v4"/></svg></span>
+        <h3>Office Storage</h3>
+        <p>Built-in desks, shelving and cupboards for a home office that's actually tidy.</p>
+        <a href="#quote" class="link-arrow" data-prefill="storage">Plan my office →</a>
       </article>
     </div>
 
@@ -1043,6 +1069,18 @@ p{margin:0 0 1em}
       <div class="stat" data-reveal style="--d:.2s"><b><span data-count="1">0</span></b><span>team from first measure to final install</span></div>
       <div class="stat" data-reveal style="--d:.3s"><b>$<span data-count="0">0</span></b><span>surprise costs — the price we quote is the price you pay</span></div>
     </div>
+  </div>
+</section>
+
+<!-- ============================ RECENT INSTALLS (fills from CONFIG.PHOTOS) ============================ -->
+<section class="sec dark grain" id="installs" hidden>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-reveal>Our work</span>
+      <h2 class="split" data-reveal>Real homes. <em>Real wardrobes.</em></h2>
+    </div>
+    <div class="gal" id="gal"></div>
+    <div class="cmp-foot" data-reveal><button type="button" class="btn btn-ghost" id="galMore" hidden>See more of our work <span class="arr">↓</span></button><a href="#quote" class="btn magnetic" data-track="cta_gallery" style="margin-left:auto">Get a quote for mine <span class="arr">→</span></a></div>
   </div>
 </section>
 
@@ -1228,7 +1266,7 @@ p{margin:0 0 1em}
 
 <!-- ============================ REVIEWS ============================ -->
 <!-- REPLACE the three quotes + names below with REAL reviews (Google / Facebook). Do not publish the sample text. -->
-<section class="sec light" id="reviews">
+<section class="sec light" id="reviews" hidden>
   <div class="wrap">
     <div class="rev-head">
       <div class="sec-head" style="margin:0">
@@ -1287,9 +1325,9 @@ p{margin:0 0 1em}
       <span class="eyebrow" data-reveal>Questions, answered</span>
       <h2 class="split" data-reveal style="margin-top:18px; font-size:clamp(40px, 5vw, 72px)">Everything you're <em>wondering.</em></h2>
       <div class="help" data-reveal>
-        <b>Rather just talk to a human?</b>
-        <span class="muted">Call us — we'll answer your questions straight, no sales pitch.</span><br>
-        <a class="tel" href="tel:+649XXXXXXX" data-track="call_faq">09 XXX XXXX</a>
+        <b>Rather just talk to Mark?</b>
+        <span class="muted">Call direct — you'll get straight answers from the person who knows wardrobes, not a call centre.</span><br>
+        <a class="tel" href="tel:+6421941449" data-track="call_faq">021 941 449</a>
       </div>
     </div>
     <div>
@@ -1314,8 +1352,8 @@ p{margin:0 0 1em}
         <div class="ans"><p>Lead times vary with the season and the size of the job. You'll get a firm install date with your quote — and we stick to it.</p></div>
       </details>
       <details class="qa" data-reveal>
-        <summary>What areas of Auckland do you service?<span class="pm" aria-hidden="true"></span></summary>
-        <div class="ans"><p>All of Auckland — Central, the North Shore, West, East and South Auckland, and the Hibiscus Coast. Not sure if you're covered? <a href="#quote" class="link-arrow">Ask us</a>.</p></div>
+        <summary>Where are you based, and what areas do you cover?<span class="pm" aria-hidden="true"></span></summary>
+        <div class="ans"><p>Our workshop is at Unit 4/58 Anzac Road in Browns Bay, so the North Shore and Hibiscus Coast are our backyard — and we work right across Auckland, including Central, West, East and South Auckland. Not sure if you're covered? <a href="#quote" class="link-arrow">Ask us</a>.</p></div>
       </details>
       <details class="qa" data-reveal>
         <summary>Do you work with builders, architects and new builds?<span class="pm" aria-hidden="true"></span></summary>
@@ -1343,9 +1381,9 @@ p{margin:0 0 1em}
         <li><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>Fixed-price written quote</span><em>Free</em></li>
         <li class="total"><span>Your cost to find out</span><em>$0</em></li>
       </ul>
-      <a class="quote-call" href="tel:+649XXXXXXX" data-reveal style="--d:.25s" data-track="call_quote">
+      <a class="quote-call" href="tel:+6421941449" data-reveal style="--d:.25s" data-track="call_quote">
         <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
-        <span><small>Prefer to talk? Call us now</small><b>09 XXX XXXX</b></span>
+        <span><small>Prefer to talk? Call Mark direct</small><b>021 941 449</b></span>
       </a>
     </div>
 
@@ -1364,9 +1402,9 @@ p{margin:0 0 1em}
             <div class="opts">
               <div class="opt"><span class="pop">Popular</span><input type="radio" name="project" id="p1" value="Walk-in wardrobe"><label for="p1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v17M3 21h18M8 7h8M12 3v18"/></svg><b>Walk-in wardrobe</b><small>A dressing room or large alcove</small></label></div>
               <div class="opt"><input type="radio" name="project" id="p2" value="Reach-in wardrobe"><label for="p2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M12 3v18M10 11v3M14 11v3"/></svg><b>Reach-in wardrobe</b><small>Doors + a fully fitted interior</small></label></div>
-              <div class="opt"><input type="radio" name="project" id="p3" value="Sliding doors only"><label for="p3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="10" height="18" rx="1"/><rect x="11" y="3" width="10" height="18" rx="1"/></svg><b>New sliding doors</b><small>Replace or add doors</small></label></div>
+              <div class="opt"><input type="radio" name="project" id="p3" value="Sliding / bifold doors"><label for="p3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="10" height="18" rx="1"/><rect x="11" y="3" width="10" height="18" rx="1"/></svg><b>Sliding / bifold doors</b><small>Replace or add doors</small></label></div>
               <div class="opt"><input type="radio" name="project" id="p4" value="Interior fit-out only"><label for="p4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M3 15h18M12 9v12"/></svg><b>Interior upgrade</b><small>Keep doors, redo the inside</small></label></div>
-              <div class="opt"><input type="radio" name="project" id="p5" value="Multiple rooms / whole home"><label for="p5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10.5 12 3l9 7.5V21H3z"/><path d="M9 21v-6h6v6"/></svg><b>Several rooms</b><small>Whole home, new build, reno</small></label></div>
+              <div class="opt"><input type="radio" name="project" id="p5" value="Garage / office storage"><label for="p5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8M7 17h10"/></svg><b>Garage / office</b><small>Storage beyond the bedroom</small></label></div>
               <div class="opt"><input type="radio" name="project" id="p6" value="Not sure yet"><label for="p6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17h.01"/></svg><b>Not sure yet</b><small>Help me figure it out</small></label></div>
             </div>
           </fieldset>
@@ -1420,7 +1458,7 @@ p{margin:0 0 1em}
               <li><i>2</i><span><b>We visit, measure &amp; design</b> — bring your wish list.</span></li>
               <li><i>3</i><span><b>You get a fixed price.</b> No pressure, no obligation.</span></li>
             </ol>
-            <a href="tel:+649XXXXXXX" class="btn btn-dark btn-block" data-track="call_success">Can't wait? Call 09 XXX XXXX <span class="arr">→</span></a>
+            <a href="tel:+6421941449" class="btn btn-dark btn-block" data-track="call_success">Can't wait? Call Mark on 021 941 449 <span class="arr">→</span></a>
           </div>
         </div>
 
@@ -1453,44 +1491,43 @@ p{margin:0 0 1em}
           <svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="10" stroke="#c9a35a" stroke-opacity=".4"/><rect x="10" y="8" width="20" height="24" rx="2" stroke="#c9a35a" stroke-width="2"/><path d="M20 8v24" stroke="#c9a35a" stroke-width="2"/><path d="M17.5 17v5M22.5 17v5" stroke="#c9a35a" stroke-width="2" stroke-linecap="round"/></svg>
           <span class="logo-txt"><b>Taylormade</b><small>Wardrobes</small></span>
         </a>
-        <p style="margin-top:20px; max-width:34ch">Custom made-to-measure wardrobes for Auckland homes. Over 30 years of doing one thing properly.</p>
+        <p style="margin-top:20px; max-width:34ch">Custom made-to-measure wardrobes and storage from our Browns Bay workshop to the rest of Auckland. Over 30 years of doing one thing properly.</p>
       </div>
       <div>
-        <h4>Wardrobes</h4>
+        <h4>What we build</h4>
         <ul>
           <li><a href="#solutions">Walk-in wardrobes</a></li>
-          <li><a href="#solutions">Reach-in wardrobes</a></li>
-          <li><a href="#solutions">Sliding wardrobe doors</a></li>
-          <li><a href="#solutions">Wardrobe interiors</a></li>
-          <li><a href="#solutions">Linen &amp; storage</a></li>
+          <li><a href="#solutions">Sliding &amp; bifold doors</a></li>
+          <li><a href="#solutions">Accessory drawers</a></li>
+          <li><a href="#solutions">Garage storage</a></li>
+          <li><a href="#solutions">Office storage</a></li>
         </ul>
       </div>
       <div>
         <h4>Areas</h4>
         <ul>
-          <li>Central Auckland</li><li>North Shore</li><li>West Auckland</li><li>East &amp; South Auckland</li><li>Hibiscus Coast</li>
+          <li>Browns Bay &amp; East Coast Bays</li><li>North Shore &amp; Albany</li><li>Hibiscus Coast</li><li>Central Auckland</li><li>West, East &amp; South Auckland</li>
         </ul>
       </div>
       <div>
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:+649XXXXXXX">09 XXX XXXX</a></li>
-          <li><a href="mailto:hello@taylormadewardrobes.co.nz">hello@taylormadewardrobes.co.nz</a></li>
-          <li>Auckland, New Zealand</li>
-          <li><a href="FACEBOOK_URL" rel="noopener" target="_blank">Facebook</a> · <a href="INSTAGRAM_URL" rel="noopener" target="_blank">Instagram</a></li>
+          <li><a href="tel:+6421941449">021 941 449</a></li>
+          <li><a href="mailto:mark.tmwardrobes@gmail.com">mark.tmwardrobes@gmail.com</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Unit+4%2F58+Anzac+Road+Browns+Bay+Auckland+0630" target="_blank" rel="noopener">Unit 4/58 Anzac Road<br>Browns Bay, Auckland 0630</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© <span id="yr">2026</span> Taylormade Wardrobes. All rights reserved.</span>
-      <span>Custom wardrobes Auckland · Walk-in wardrobes · Sliding wardrobe doors</span>
+      <span>© <span id="yr">2026</span> Taylormade Wardrobes Limited. All rights reserved.</span>
+      <span>Custom wardrobes North Shore &amp; Auckland · Walk-in wardrobes · Sliding &amp; bifold doors</span>
     </div>
   </div>
 </footer>
 
 <!-- Sticky mobile CTA -->
 <div class="mbar" id="mbar">
-  <a class="call" href="tel:+649XXXXXXX" aria-label="Call Taylormade Wardrobes" data-track="call_mbar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></a>
+  <a class="call" href="tel:+6421941449" aria-label="Call Taylormade Wardrobes" data-track="call_mbar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></a>
   <a href="#quote" class="btn" data-track="cta_mbar">Get my free quote <span class="arr">→</span></a>
 </div>
 
@@ -1514,7 +1551,32 @@ const CONFIG = {
   // Form backend. e.g. "https://formspree.io/f/abcdwxyz" (Formspree / Getform / Basin all accept JSON POST).
   // Leave "" to fall back to opening the visitor's email app pre-filled.
   FORM_ENDPOINT: "",
-  EMAIL: "hello@taylormadewardrobes.co.nz",
+  EMAIL: "mark.tmwardrobes@gmail.com",
+
+  // Your logo file (SVG or transparent PNG works best on the dark header). "" keeps the placeholder mark.
+  LOGO_URL: "https://static.wixstatic.com/media/c48b62_d433c4586084418fa337af70986a0668~mv2.png/v1/fit/w_710,h_212,q_90,enc_auto/c48b62_d433c4586084418fa337af70986a0668~mv2.png",
+  // Turns a dark logo white so it shows on the black header. Set false if your logo is already light/coloured.
+  LOGO_INVERT: true,
+  // Your install photos. Add as many as you like; the "Recent installs" section appears once this has entries.
+  // { src: "images/walk-in-orewa.jpg", alt: "Oak walk-in wardrobe with LED lighting in Orewa", caption: "Walk-in · Orewa" }
+  PHOTOS: [
+    { src: "https://static.wixstatic.com/media/c48b62_aa1b0ae2eea3478fb16cb87f56567a76~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85,enc_auto/c48b62_aa1b0ae2eea3478fb16cb87f56567a76~mv2.jpg", alt: "Custom wardrobe built and installed by Taylormade Wardrobes, Auckland" },
+    { src: "https://static.wixstatic.com/media/c48b62_ec54cd13cc00470986b8b6ef12e21e5f~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85,enc_auto/c48b62_ec54cd13cc00470986b8b6ef12e21e5f~mv2.jpg", alt: "Custom wardrobe built and installed by Taylormade Wardrobes, Auckland" },
+    { src: "https://static.wixstatic.com/media/c48b62_87a8a348df50436886a2e62c5def97e7~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85,enc_auto/c48b62_87a8a348df50436886a2e62c5def97e7~mv2.jpg", alt: "Custom wardrobe built and installed by Taylormade Wardrobes, Auckland" },
+    { src: "https://static.wixstatic.com/media/c48b62_bdc90385a46f4882bc1460d86cade514~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85,enc_auto/c48b62_bdc90385a46f4882bc1460d86cade514~mv2.jpg", alt: "Custom wardrobe built and installed by Taylormade Wardrobes, Auckland" },
+    { src: "https://static.wixstatic.com/media/c48b62_1f60dd661d264551bfb5947bdd8023d2~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85,enc_auto/c48b62_1f60dd661d264551bfb5947bdd8023d2~mv2.jpg", alt: "Custom wardrobe built and installed by Taylormade Wardrobes, Auckland" },
+    { src: "https://static.wixstatic.com/media/c48b62_2ac2f0a1efeb437cadf1003d5c18b4d0~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85,enc_auto/c48b62_2ac2f0a1efeb437cadf1003d5c18b4d0~mv2.jpg", alt: "Custom wardrobe built and installed by Taylormade Wardrobes, Auckland" },
+    { src: "https://static.wixstatic.com/media/c48b62_3abef6ab0995425cbf96383bdf4a3588~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85,enc_auto/c48b62_3abef6ab0995425cbf96383bdf4a3588~mv2.jpg", alt: "Custom wardrobe built and installed by Taylormade Wardrobes, Auckland" },
+    { src: "https://static.wixstatic.com/media/c48b62_4001e00bec514c8d984ee0023ea73994~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85,enc_auto/c48b62_4001e00bec514c8d984ee0023ea73994~mv2.jpg", alt: "Custom wardrobe built and installed by Taylormade Wardrobes, Auckland" },
+    { src: "https://static.wixstatic.com/media/c48b62_cd9f0726889b459bbc564e9ce777598f~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85,enc_auto/c48b62_cd9f0726889b459bbc564e9ce777598f~mv2.jpg", alt: "Wardrobe accessory drawers" },
+    { src: "https://static.wixstatic.com/media/c48b62_a4d8fe1a80ab499f9e5c911e9055b691~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85,enc_auto/c48b62_a4d8fe1a80ab499f9e5c911e9055b691~mv2.jpg", alt: "Custom wardrobe built and installed by Taylormade Wardrobes, Auckland" },
+    { src: "https://static.wixstatic.com/media/c48b62_64f69b5c249d4136b61f24fba36a1fb9~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85,enc_auto/c48b62_64f69b5c249d4136b61f24fba36a1fb9~mv2.jpg", alt: "Custom wardrobe built and installed by Taylormade Wardrobes, Auckland" },
+    { src: "https://static.wixstatic.com/media/c48b62_57696fe9dbd740b1bbd81f4ff2ea2350~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85,enc_auto/c48b62_57696fe9dbd740b1bbd81f4ff2ea2350~mv2.jpg", alt: "Custom wardrobe built and installed by Taylormade Wardrobes, Auckland" },
+    { src: "https://static.wixstatic.com/media/c48b62_89330ab4c70b4a0ebdd98bdea5a3de6b~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85,enc_auto/c48b62_89330ab4c70b4a0ebdd98bdea5a3de6b~mv2.jpg", alt: "Sliding wardrobe door with mirror insert" },
+    { src: "https://static.wixstatic.com/media/c48b62_c2f45fe289344c94aec2ec0ecf427f94~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85,enc_auto/c48b62_c2f45fe289344c94aec2ec0ecf427f94~mv2.jpg", alt: "Custom wardrobe built and installed by Taylormade Wardrobes, Auckland" },
+    { src: "https://static.wixstatic.com/media/c48b62_bdd46fb1d7c24992b9a5790d1a9b06df~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85,enc_auto/c48b62_bdd46fb1d7c24992b9a5790d1a9b06df~mv2.jpg", alt: "Custom wardrobe built and installed by Taylormade Wardrobes, Auckland" },
+    { src: "https://static.wixstatic.com/media/c48b62_252d8d7da402454087e4945206374ce0~mv2.jpg/v1/fill/w_900,h_1100,al_c,q_85,enc_auto/c48b62_252d8d7da402454087e4945206374ce0~mv2.jpg", alt: "Bifold wardrobe doors" }
+  ],
 
   // Indicative pricing, NZD incl. GST, supply + install. SET THESE TO YOUR REAL NUMBERS.
   // Estimate = (base + perMetre × width) × finish multiplier + extras
@@ -1548,6 +1610,34 @@ const CONFIG = {
   const nzd = n => '$' + Math.round(n).toLocaleString('en-NZ');
 
   $('#yr').textContent = new Date().getFullYear();
+
+  /* ---------- brand assets from CONFIG ---------- */
+  if (CONFIG.LOGO_URL) $$('.logo').forEach(l => {
+    const img = new Image(); img.alt = 'Taylormade Wardrobes'; img.className = 'logo-img';
+    if (CONFIG.LOGO_INVERT) img.style.filter = 'brightness(0) invert(1)';
+    const fallback = [...l.childNodes];
+    img.onerror = () => l.replaceChildren(...fallback); // keep the placeholder mark if the logo can't load
+    img.src = CONFIG.LOGO_URL;
+    l.replaceChildren(img);
+  });
+  if (CONFIG.PHOTOS.length) {
+    const gal = $('#gal');
+    CONFIG.PHOTOS.forEach((ph, i) => {
+      const f = document.createElement('figure');
+      f.setAttribute('data-reveal', 'fade'); f.style.setProperty('--d', (i % 3) * 0.08 + 's');
+      const img = new Image(); img.src = ph.src; img.alt = ph.alt || ''; img.loading = 'lazy'; img.decoding = 'async';
+      f.appendChild(img);
+      if (ph.caption) { const c = document.createElement('figcaption'); c.textContent = ph.caption; f.appendChild(c); }
+      if (i >= 8) f.classList.add('more');
+      gal.appendChild(f);
+    });
+    $('#installs').hidden = false;
+    const more = $('#galMore');
+    if (CONFIG.PHOTOS.length > 8) {
+      more.hidden = false;
+      more.addEventListener('click', () => { gal.classList.add('all'); $$('.more', gal).forEach(f => f.classList.add('in')); more.hidden = true; track('gallery_more'); });
+    }
+  }
 
   /* ---------- split headings into masked words ---------- */
   $$('.split').forEach(el => {
@@ -1873,12 +1963,12 @@ const CONFIG = {
       go(5);
     } catch (err) {
       next.disabled = false; next.innerHTML = 'Try again <span class="arr">→</span>';
-      alert('Sorry — that didn\'t send. Please call us on 09 XXX XXXX or email ' + CONFIG.EMAIL);
+      alert('Sorry — that didn\'t send. Please call Mark on 021 941 449 or email ' + CONFIG.EMAIL);
     }
   };
 
   // prefill from cards / styles / estimator
-  const typeMap = { walkin: 'p1', reachin: 'p2', doors: 'p3', interior: 'p4', multiple: 'p5' };
+  const typeMap = { walkin: 'p1', reachin: 'p2', doors: 'p3', interior: 'p4', storage: 'p5' };
   const prefillType = key => { const id = typeMap[key]; if (id && cur === 1) { $('#' + id).checked = true; setTimeout(() => go(2), 700); } };
   $$('[data-prefill]').forEach(a => a.addEventListener('click', () => { prefillType(a.dataset.prefill); track('cta_prefill', { type: a.dataset.prefill }); }));
   $$('[data-prefill-style]').forEach(a => a.addEventListener('click', () => {
