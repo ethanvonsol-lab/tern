@@ -608,7 +608,10 @@ p{margin:0 0 1em}
 .gal figure.in img, .gal figure:hover img{transform:scale(1)}
 .gal figure:hover img{transform:scale(1.04)}
 .gal figcaption{position:absolute; left:14px; bottom:14px; padding:8px 14px; border-radius:999px; background:rgba(18,16,16,.72); color:var(--paper); font-size:13px; font-weight:700; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px)}
-.logo-img{height:44px; width:auto}
+.logo-img{height:44px; width:auto; max-width:200px; object-fit:contain}
+.logo.plate{background:var(--paper); padding:6px 14px; border-radius:12px; box-shadow:0 8px 24px -10px rgba(0,0,0,.6), inset 0 0 0 1px rgba(201,163,90,.45)}
+.logo.plate .logo-img{height:38px}
+@media (max-width:760px){ .logo.plate .logo-img{height:32px; max-width:150px} }
 @media (max-width:900px){ .gal{grid-template-columns:1fr 1fr; grid-auto-rows:200px} }
 @media (max-width:520px){ .gal{grid-template-columns:1fr} .gal figure:nth-child(5n+1){grid-row:auto} }
 
@@ -1555,8 +1558,9 @@ const CONFIG = {
 
   // Your logo file (SVG or transparent PNG works best on the dark header). "" keeps the placeholder mark.
   LOGO_URL: "https://static.wixstatic.com/media/c48b62_d433c4586084418fa337af70986a0668~mv2.png/v1/fit/w_710,h_212,q_90,enc_auto/c48b62_d433c4586084418fa337af70986a0668~mv2.png",
-  // Turns a dark logo white so it shows on the black header. Set false if your logo is already light/coloured.
-  LOGO_INVERT: true,
+  // true = force the logo white (only for a single-colour logo on a transparent background).
+  // false = show the logo in its real colours on a cream nameplate (works for any logo).
+  LOGO_INVERT: false,
   // Your install photos. Add as many as you like; the "Recent installs" section appears once this has entries.
   // { src: "images/walk-in-orewa.jpg", alt: "Oak walk-in wardrobe with LED lighting in Orewa", caption: "Walk-in · Orewa" }
   PHOTOS: [
@@ -1616,8 +1620,9 @@ const CONFIG = {
     const img = new Image(); img.alt = 'Taylormade Wardrobes'; img.className = 'logo-img';
     if (CONFIG.LOGO_INVERT) img.style.filter = 'brightness(0) invert(1)';
     const fallback = [...l.childNodes];
-    img.onerror = () => l.replaceChildren(...fallback); // keep the placeholder mark if the logo can't load
+    img.onerror = () => { l.classList.remove('plate'); l.replaceChildren(...fallback); }; // keep the placeholder mark if the logo can't load
     img.src = CONFIG.LOGO_URL;
+    if (!CONFIG.LOGO_INVERT) l.classList.add('plate');
     l.replaceChildren(img);
   });
   if (CONFIG.PHOTOS.length) {
