@@ -10,13 +10,14 @@
     Unit 4/58 Anzac Road, Browns Bay, Auckland 0630
     Services: walk-in wardrobes, sliding doors, bifold doors, accessory drawers,
               garage storage, office storage
-    Logo + all project photos (loaded from your Wix media library — see note below)
+    Logo (images/logo.png — upload this folder with the page) + all project photos
+    (photos still load from your Wix media library — see note below)
     Legal name from the Companies Register: Taylormade Wardrobes Limited
 
   STILL TO DO BEFORE GOING LIVE:
     1. PHOTOS/LOGO: they currently load from static.wixstatic.com. They work, but they
        DIE if you cancel Wix. Download the originals from Wix > Media, put them in an
-       /images folder and swap the URLs (CONFIG.PHOTOS, CONFIG.LOGO_URL, and the
+       /images folder and swap the URLs (CONFIG.PHOTOS and the
        <img> tags in the "What we build" section).
     2. REVIEWS: the reviews section is hidden (it has the `hidden` attribute). Paste in
        REAL Google/Facebook reviews, then delete `hidden`. Never publish made-up ones.
@@ -25,8 +26,8 @@
     4. PRICING (in the <script>): set to YOUR real price-per-metre ranges.
     5. Your current site's social icons link to Wix's own Facebook/Instagram, not yours.
        If you have real pages, add them to the footer and the JSON-LD "sameAs".
-    6. Colours: your current site is plain black / light grey with no brand colour,
-       so this page uses black + gold. Change --brass / --oak / --ink in :root to rebrand.
+    6. Colours come from the logo: teal #88D2D3, red #ED1C24, amber #F8B11B,
+       grey #6D6C71, hanger brown #815640 (the --tm-* tokens in :root).
 
   Claims to double-check are TRUE for your business (delete any that aren't):
     "Free in-home design consult", "Fixed-price quote", "Soft-close hardware as
@@ -40,6 +41,7 @@
 <link rel="canonical" href="https://www.taylormadewardrobes.co.nz/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#121010">
+<link rel="apple-touch-icon" href="images/logo.png">
 <meta name="geo.region" content="NZ-AUK">
 <meta name="geo.placename" content="Browns Bay, Auckland">
 
@@ -53,7 +55,7 @@
 <meta property="og:image" content="https://static.wixstatic.com/media/c48b62_2a73076e406b489db61dda6f0be4074d~mv2.jpg/v1/fill/w_1200,h_630,al_c,q_85,enc_auto/c48b62_2a73076e406b489db61dda6f0be4074d~mv2.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23121010'/%3E%3Crect x='15' y='12' width='34' height='40' rx='3' fill='none' stroke='%23c9a35a' stroke-width='3'/%3E%3Cline x1='32' y1='12' x2='32' y2='52' stroke='%23c9a35a' stroke-width='3'/%3E%3Cline x1='28' y1='28' x2='28' y2='36' stroke='%23c9a35a' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='36' y1='28' x2='36' y2='36' stroke='%23c9a35a' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2388d2d3'/%3E%3Crect x='14' y='14' width='10' height='12' fill='%23815640'/%3E%3Crect x='14' y='28' width='10' height='10' fill='%23f8b11b'/%3E%3Crect x='14' y='40' width='36' height='10' fill='%23ed1c24'/%3E%3Cpath d='M28 14h22M39 14v22' stroke='%236d6c71' stroke-width='5'/%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,7 +71,7 @@
   "legalName": "Taylormade Wardrobes Limited",
   "url": "https://www.taylormadewardrobes.co.nz/",
   "image": "https://static.wixstatic.com/media/c48b62_2a73076e406b489db61dda6f0be4074d~mv2.jpg/v1/fill/w_1200,h_630,al_c,q_85,enc_auto/c48b62_2a73076e406b489db61dda6f0be4074d~mv2.jpg",
-  "logo": "https://static.wixstatic.com/media/c48b62_d433c4586084418fa337af70986a0668~mv2.png",
+  "logo": "https://www.taylormadewardrobes.co.nz/images/logo.png",
   "description": "Custom made-to-measure wardrobes in Auckland: walk-in wardrobes, sliding and bifold wardrobe doors, accessory drawers, garage storage and office storage. Over 30 years' experience.",
   "telephone": "+64 21 941 449",
   "email": "mark.tmwardrobes@gmail.com",
@@ -140,11 +142,13 @@
 :root{
   --ink:#121010; --ink-2:#1a1715; --ink-3:#24201c; --ink-4:#2f2a25;
   --paper:#f7f2ea; --paper-2:#efe6d8; --white:#fffdf9;
-  --oak:#b98a57; --oak-d:#8a6238; --walnut:#5b3d28;
-  --brass:#c9a35a; --brass-l:#e8d3a2; --brass-d:#9c7a36;
-  --text:#1b1815; --muted:#6c6258; --muted-d:#a79d90;
+  --oak:#b98a57; --oak-d:#815640; --walnut:#5b3d28;
+  --brass:#f8b11b; --brass-l:#fdd27a; --brass-d:#c98a0b;
+  /* logo colours */
+  --tm-teal:#88d2d3; --tm-teal-d:#2f8a8c; --tm-red:#ed1c24; --tm-amber:#f8b11b; --tm-grey:#6d6c71; --tm-brown:#815640;
+  --text:#1b1815; --muted:#6d6c71; --muted-d:#a79d90;
   --line:rgba(27,24,21,.12); --line-d:rgba(255,246,230,.12);
-  --ok:#3f8f5a;
+  --ok:#2f8a8c;
   --r:16px; --r-lg:28px;
   --ease:cubic-bezier(.22,1,.36,1);
   --ease-io:cubic-bezier(.65,0,.35,1);
@@ -193,17 +197,17 @@ p{margin:0 0 1em}
 .lede{font-size:clamp(18px, 1.5vw, 21px); line-height:1.55; max-width:60ch}
 .eyebrow{display:inline-flex; align-items:center; gap:10px; font-size:12.5px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--brass)}
 .light .eyebrow, .white .eyebrow{color:var(--oak-d)}
-.eyebrow::before{content:""; width:28px; height:1px; background:currentColor}
+.eyebrow::before{content:""; width:30px; height:4px; border-radius:2px; background:linear-gradient(90deg, var(--tm-red) 0 33.3%, var(--tm-amber) 33.3% 66.6%, var(--tm-teal) 66.6% 100%)}
 .sec-head{display:grid; gap:22px; margin-bottom:clamp(48px, 6vw, 84px); max-width:900px}
 .sec-head.center{margin-inline:auto; text-align:center; justify-items:center}
 
 /* =========================================================================
    BUTTONS
    ========================================================================= */
-.btn{--bg:var(--brass); --fg:var(--ink); position:relative; display:inline-flex; align-items:center; justify-content:center; gap:12px; padding:18px 28px; border-radius:999px; background:var(--bg); color:var(--fg); font-weight:800; font-size:16px; letter-spacing:.01em; overflow:hidden; isolation:isolate; white-space:nowrap; transition:transform .5s var(--ease), box-shadow .5s var(--ease), background .3s; box-shadow:0 10px 30px -10px rgba(201,163,90,.55), inset 0 1px 0 rgba(255,255,255,.35)}
+.btn{--bg:var(--brass); --fg:var(--ink); position:relative; display:inline-flex; align-items:center; justify-content:center; gap:12px; padding:18px 28px; border-radius:999px; background:var(--bg); color:var(--fg); font-weight:800; font-size:16px; letter-spacing:.01em; overflow:hidden; isolation:isolate; white-space:nowrap; transition:transform .5s var(--ease), box-shadow .5s var(--ease), background .3s; box-shadow:0 10px 30px -10px rgba(248,177,27,.55), inset 0 1px 0 rgba(255,255,255,.35)}
 .btn::before{content:""; position:absolute; inset:0; background:linear-gradient(120deg, transparent 30%, rgba(255,255,255,.55) 50%, transparent 70%); transform:translateX(-120%); transition:transform .9s var(--ease); z-index:-1}
 .btn:hover::before{transform:translateX(120%)}
-.btn:hover{box-shadow:0 18px 40px -12px rgba(201,163,90,.75), inset 0 1px 0 rgba(255,255,255,.35)}
+.btn:hover{box-shadow:0 18px 40px -12px rgba(248,177,27,.75), inset 0 1px 0 rgba(255,255,255,.35)}
 .btn .arr{display:inline-grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--fg); color:var(--bg); transition:transform .5s var(--ease)}
 .btn:hover .arr{transform:translateX(4px) rotate(-45deg)}
 .btn-lg{padding:20px 28px; font-size:17px}
@@ -221,11 +225,11 @@ p{margin:0 0 1em}
 /* =========================================================================
    PROGRESS + CURSOR
    ========================================================================= */
-.progress{position:fixed; top:0; left:0; height:3px; width:100%; transform-origin:0 50%; transform:scaleX(0); background:linear-gradient(90deg, var(--brass-d), var(--brass-l)); z-index:120}
+.progress{position:fixed; top:0; left:0; height:3px; width:100%; transform-origin:0 50%; transform:scaleX(0); background:linear-gradient(90deg, var(--tm-red), var(--tm-amber) 50%, var(--tm-teal)); z-index:120}
 .cursor, .cursor-dot{position:fixed; top:0; left:0; pointer-events:none; z-index:200; border-radius:50%; opacity:0; transition:opacity .3s}
-.cursor{width:40px; height:40px; margin:-20px 0 0 -20px; border:1px solid rgba(201,163,90,.7); transition:width .35s var(--ease), height .35s var(--ease), margin .35s var(--ease), background .35s, opacity .3s, border-color .35s}
+.cursor{width:40px; height:40px; margin:-20px 0 0 -20px; border:1px solid rgba(248,177,27,.7); transition:width .35s var(--ease), height .35s var(--ease), margin .35s var(--ease), background .35s, opacity .3s, border-color .35s}
 .cursor-dot{width:6px; height:6px; margin:-3px 0 0 -3px; background:var(--brass)}
-.cursor.hover{width:74px; height:74px; margin:-37px 0 0 -37px; background:rgba(201,163,90,.14); border-color:transparent}
+.cursor.hover{width:74px; height:74px; margin:-37px 0 0 -37px; background:rgba(248,177,27,.14); border-color:transparent}
 .cursor-on .cursor, .cursor-on .cursor-dot{opacity:1}
 
 /* =========================================================================
@@ -264,7 +268,7 @@ p{margin:0 0 1em}
    HERO
    ========================================================================= */
 .hero{min-height:100svh; display:flex; align-items:center; padding:130px 0 90px; background:
-  radial-gradient(1200px 700px at 78% 30%, rgba(201,163,90,.16), transparent 60%),
+  radial-gradient(1200px 700px at 78% 30%, rgba(248,177,27,.16), transparent 60%),
   radial-gradient(900px 600px at 10% 90%, rgba(185,138,87,.10), transparent 60%),
   var(--ink); color:var(--paper); overflow:hidden}
 .hero-lines{position:absolute; inset:0; display:grid; grid-template-columns:repeat(6, 1fr); pointer-events:none; max-width:var(--max); margin:0 auto; padding:0 var(--gut)}
@@ -328,11 +332,13 @@ p{margin:0 0 1em}
 /* =========================================================================
    MARQUEE
    ========================================================================= */
-.marquee{background:var(--brass); color:var(--ink); overflow:hidden; padding:22px 0; border-block:1px solid var(--brass-d)}
+.marquee{background:var(--tm-teal); color:var(--ink); overflow:hidden; padding:22px 0; border-block:1px solid rgba(0,0,0,.08)}
 .marquee-track{display:flex; width:max-content; animation:marq 40s linear infinite}
 .marquee:hover .marquee-track{animation-play-state:paused}
 .marquee-track span{display:flex; align-items:center; gap:34px; padding-right:34px; font-family:var(--f-display); font-size:clamp(22px, 2.6vw, 34px); font-style:italic; white-space:nowrap}
-.marquee-track span::after{content:"✦"; font-style:normal; font-size:.6em; opacity:.6}
+.marquee-track span::after{content:""; width:10px; height:10px; border-radius:2px; background:var(--tm-red); flex:none}
+.marquee-track span:nth-child(3n+2)::after{background:var(--tm-amber)}
+.marquee-track span:nth-child(3n)::after{background:var(--ink)}
 @keyframes marq{to{transform:translateX(-50%)}}
 
 /* =========================================================================
@@ -344,7 +350,7 @@ p{margin:0 0 1em}
 .pain .num{font-family:var(--f-display); font-size:15px; color:var(--oak-d); font-style:italic}
 .pain h3{margin:48px 0 14px}
 .pain p{color:var(--muted); margin:0}
-.pain .x{position:absolute; right:24px; top:24px; width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:#f3e3dd; color:#a2412b}
+.pain .x{position:absolute; right:24px; top:24px; width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:#fde3e3; color:#c4141b}
 .scrub{font-family:var(--f-display); font-size:clamp(32px, 4.6vw, 66px); line-height:1.12; letter-spacing:-.02em; margin-top:clamp(80px, 10vw, 140px); max-width:1100px}
 .scrub .sw-w{opacity:.14; transition:opacity .25s linear}
 .scrub .sw-w.lit{opacity:1}
@@ -355,7 +361,7 @@ p{margin:0 0 1em}
    ANATOMY (pinned wardrobe)
    ========================================================================= */
 .anat{height:360vh; background:
-  radial-gradient(900px 600px at 70% 50%, rgba(201,163,90,.12), transparent 65%), var(--ink); color:var(--paper)}
+  radial-gradient(900px 600px at 70% 50%, rgba(248,177,27,.12), transparent 65%), var(--ink); color:var(--paper)}
 .anat-pin{position:sticky; top:0; height:100svh; display:flex; align-items:center; overflow:hidden}
 .anat .sec-copy{position:relative; z-index:10}
 .anat-grid{display:grid; grid-template-columns:.8fr 1.2fr; gap:clamp(30px, 4vw, 60px); align-items:center; width:100%}
@@ -442,7 +448,7 @@ p{margin:0 0 1em}
 .card p{color:var(--muted); margin:0 0 20px; max-width:44ch}
 .card .link-arrow{align-self:flex-start; font-size:15px}
 
-.card .glow{position:absolute; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle, rgba(201,163,90,.28), transparent 65%); left:var(--mx, 50%); top:var(--my, 50%); transform:translate(-50%,-50%); opacity:0; transition:opacity .4s; pointer-events:none; z-index:-1}
+.card .glow{position:absolute; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle, rgba(248,177,27,.28), transparent 65%); left:var(--mx, 50%); top:var(--my, 50%); transform:translate(-50%,-50%); opacity:0; transition:opacity .4s; pointer-events:none; z-index:-1}
 .card:hover .glow{opacity:1}
 .c-walk{grid-column:span 4; grid-row:span 2}
 .c-sq{grid-column:span 2}
@@ -488,13 +494,13 @@ p{margin:0 0 1em}
 .cmp th:first-child,.cmp td:first-child{text-align:left; font-weight:600}
 .cmp thead th{font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:700; background:var(--paper)}
 .cmp thead th.us{background:var(--ink); color:var(--brass); font-size:14px}
-.cmp td.us{background:rgba(201,163,90,.09); font-weight:700}
+.cmp td.us{background:rgba(248,177,27,.09); font-weight:700}
 .cmp tbody tr:last-child td{border-bottom:0}
 .cmp tbody tr{transition:background .3s}
-.cmp tbody tr:hover{background:rgba(201,163,90,.05)}
+.cmp tbody tr:hover{background:rgba(248,177,27,.05)}
 .yes,.no,.meh{display:inline-grid; place-items:center; width:30px; height:30px; border-radius:50%; font-weight:800; font-size:14px}
 .yes{background:var(--ink); color:var(--brass)}
-.no{background:#f3e3dd; color:#a2412b}
+.no{background:#fde3e3; color:#c4141b}
 .meh{background:var(--paper-2); color:var(--muted)}
 .cmp-wrap{overflow-x:auto; -webkit-overflow-scrolling:touch}
 .cmp table{min-width:640px}
@@ -510,11 +516,11 @@ p{margin:0 0 1em}
 .hs-intro{width:min(520px, 80vw); flex:none; display:flex; flex-direction:column; justify-content:center; padding-right:30px}
 .hs-intro h2{font-size:clamp(44px, 5.6vw, 84px)}
 .step{flex:none; width:min(460px, 82vw); height:min(560px, 66svh); border-radius:var(--r-lg); padding:38px; display:flex; flex-direction:column; background:linear-gradient(160deg, var(--ink-3), var(--ink-2)); border:1px solid var(--line-d); position:relative; overflow:hidden}
-.step .n{font-family:var(--f-display); font-size:clamp(90px, 10vw, 150px); line-height:.8; color:transparent; -webkit-text-stroke:1px rgba(201,163,90,.55); letter-spacing:-.04em}
+.step .n{font-family:var(--f-display); font-size:clamp(90px, 10vw, 150px); line-height:.8; color:transparent; -webkit-text-stroke:1px rgba(248,177,27,.55); letter-spacing:-.04em}
 .step h3{margin-top:auto; font-size:clamp(28px, 2.6vw, 38px)}
 .step p{color:var(--muted-d); margin:14px 0 0}
 .step .tag{position:absolute; top:34px; right:34px; font-size:12px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--ink); background:var(--brass); padding:7px 12px; border-radius:999px}
-.step svg.art{position:absolute; right:-20px; top:90px; width:220px; height:220px; color:rgba(201,163,90,.18)}
+.step svg.art{position:absolute; right:-20px; top:90px; width:220px; height:220px; color:rgba(248,177,27,.18)}
 .step.final{background:linear-gradient(160deg, var(--brass), #b58f47); color:var(--ink)}
 .step.final p{color:rgba(18,16,16,.75)}
 .step.final .n{-webkit-text-stroke:1px rgba(18,16,16,.45)}
@@ -550,7 +556,7 @@ p{margin:0 0 1em}
 .range::-moz-range-thumb{width:24px; height:24px; border-radius:50%; background:var(--ink); border:4px solid var(--brass); cursor:grab}
 .range-scale{display:flex; justify-content:space-between; font-size:12.5px; color:var(--muted); margin-top:10px}
 .est-out{position:sticky; top:100px; align-self:start; background:var(--ink); color:var(--paper); border-radius:var(--r-lg); padding:clamp(26px, 3vw, 44px); overflow:hidden; isolation:isolate}
-.est-out::before{content:""; position:absolute; width:500px; height:500px; right:-200px; top:-200px; background:radial-gradient(circle, rgba(201,163,90,.25), transparent 65%); z-index:-1}
+.est-out::before{content:""; position:absolute; width:500px; height:500px; right:-200px; top:-200px; background:radial-gradient(circle, rgba(248,177,27,.25), transparent 65%); z-index:-1}
 .preview{height:170px; display:flex; align-items:flex-end; justify-content:center; margin-bottom:26px; border-bottom:1px solid var(--line-d); padding-bottom:18px}
 .pv{height:140px; display:flex; gap:3px; padding:5px; border-radius:6px; background:#8a6238; transition:width .6s var(--ease); box-shadow:0 20px 40px -18px rgba(0,0,0,.8)}
 .pv i{flex:1; border-radius:2px; position:relative; transition:background .5s}
@@ -558,7 +564,7 @@ p{margin:0 0 1em}
 .pv i:nth-child(odd)::after{right:6px} .pv i:nth-child(even)::after{left:6px}
 .pv.walk{background:#3a2e25} .pv.walk i{background:linear-gradient(#e9dfcf,#d8cab4)!important} .pv.walk i::after{display:none}
 .est-type{font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--brass); font-weight:800}
-.price{font-family:var(--f-display); font-size:clamp(44px, 5.4vw, 72px); line-height:1; letter-spacing:-.03em; margin:10px 0 6px; font-weight:350; font-variant-numeric:tabular-nums}
+.price{white-space:nowrap; font-family:var(--f-display); font-size:clamp(34px, 4.1vw, 60px); line-height:1; letter-spacing:-.03em; margin:10px 0 6px; font-weight:350; font-variant-numeric:tabular-nums}
 .price small{font-size:.4em; color:var(--muted-d); letter-spacing:0; margin:0 .2em}
 .est-note{font-size:13.5px; color:var(--muted-d); margin-bottom:24px}
 .est-inc{list-style:none; padding:0; margin:0 0 28px; display:grid; gap:10px; font-size:15px}
@@ -609,9 +615,9 @@ p{margin:0 0 1em}
 .gal figure:hover img{transform:scale(1.04)}
 .gal figcaption{position:absolute; left:14px; bottom:14px; padding:8px 14px; border-radius:999px; background:rgba(18,16,16,.72); color:var(--paper); font-size:13px; font-weight:700; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px)}
 .logo-img{height:44px; width:auto; max-width:200px; object-fit:contain}
-.logo.plate{background:var(--paper); padding:6px 14px; border-radius:12px; box-shadow:0 8px 24px -10px rgba(0,0,0,.6), inset 0 0 0 1px rgba(201,163,90,.45)}
-.logo.plate .logo-img{height:38px}
-@media (max-width:760px){ .logo.plate .logo-img{height:32px; max-width:150px} }
+.logo.plate .logo-img{height:52px; max-width:none; border-radius:10px; box-shadow:0 10px 26px -12px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.08)}
+.foot .logo.plate .logo-img{height:64px}
+@media (max-width:760px){ .logo.plate .logo-img{height:42px} }
 @media (max-width:900px){ .gal{grid-template-columns:1fr 1fr; grid-auto-rows:200px} }
 @media (max-width:520px){ .gal{grid-template-columns:1fr} .gal figure:nth-child(5n+1){grid-row:auto} }
 
@@ -636,7 +642,7 @@ p{margin:0 0 1em}
 /* =========================================================================
    GUARANTEE
    ========================================================================= */
-.promise{background:linear-gradient(135deg, #1a1612, #0f0d0b); color:var(--paper); border-radius:var(--r-lg); padding:clamp(34px, 5vw, 80px); display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(30px, 5vw, 80px); position:relative; overflow:hidden; border:1px solid rgba(201,163,90,.25)}
+.promise{background:linear-gradient(135deg, #1a1612, #0f0d0b); color:var(--paper); border-radius:var(--r-lg); padding:clamp(34px, 5vw, 80px); display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(30px, 5vw, 80px); position:relative; overflow:hidden; border:1px solid rgba(248,177,27,.25)}
 .promise::before{content:""; position:absolute; inset:-1px; border-radius:inherit; padding:1px; background:conic-gradient(from var(--a, 0deg), transparent 0 70%, var(--brass) 85%, transparent 100%); -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude; animation:rot 6s linear infinite; pointer-events:none}
 @property --a{syntax:'<angle>'; initial-value:0deg; inherits:false}
 @keyframes rot{to{--a:360deg}}
@@ -647,7 +653,7 @@ p{margin:0 0 1em}
 .promise-list{list-style:none; margin:0; padding:0; display:grid; gap:0}
 .promise-list li{display:grid; grid-template-columns:52px 1fr; gap:4px 18px; padding:24px 0; border-top:1px solid var(--line-d)}
 .promise-list li:first-child{border-top:0; padding-top:0}
-.promise-list .pi{grid-row:span 2; width:52px; height:52px; border-radius:14px; display:grid; place-items:center; background:rgba(201,163,90,.12); color:var(--brass)}
+.promise-list .pi{grid-row:span 2; width:52px; height:52px; border-radius:14px; display:grid; place-items:center; background:rgba(248,177,27,.12); color:var(--brass)}
 .promise-list .pi svg{width:24px; height:24px}
 .promise-list b{font-size:19px}
 .promise-list p{margin:0; color:var(--muted-d); font-size:15.5px}
@@ -678,7 +684,7 @@ p{margin:0 0 1em}
    QUOTE FUNNEL
    ========================================================================= */
 .quote{background:
-  radial-gradient(1000px 600px at 15% 20%, rgba(201,163,90,.14), transparent 60%),
+  radial-gradient(1000px 600px at 15% 20%, rgba(248,177,27,.14), transparent 60%),
   radial-gradient(800px 500px at 90% 90%, rgba(185,138,87,.10), transparent 60%), var(--ink); color:var(--paper)}
 .quote-grid{display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(30px, 5vw, 80px); align-items:start}
 .quote h2{font-size:clamp(44px, 5.6vw, 84px)}
@@ -701,7 +707,7 @@ p{margin:0 0 1em}
 .f-top .step-of{color:var(--muted)}
 .f-top .nudge{color:var(--oak-d)}
 .f-bar{height:6px; border-radius:6px; background:var(--paper-2); overflow:hidden; margin-bottom:34px}
-.f-bar i{display:block; height:100%; width:25%; border-radius:6px; background:linear-gradient(90deg, var(--oak-d), var(--brass)); transition:width .7s var(--ease)}
+.f-bar i{display:block; height:100%; width:25%; border-radius:6px; background:linear-gradient(90deg, var(--tm-red), var(--tm-amber) 55%, var(--tm-teal)); transition:width .7s var(--ease)}
 .f-steps{position:relative}
 .f-step{display:none}
 .f-step.active{display:block; animation:stepIn .7s var(--ease) both}
@@ -730,7 +736,7 @@ p{margin:0 0 1em}
 .fld label{font-size:13px; font-weight:700; letter-spacing:.02em}
 .fld input,.fld textarea,.fld select{width:100%; padding:16px 16px; border-radius:12px; border:1.5px solid var(--line); background:var(--paper); outline:none; transition:border-color .3s, background .3s, box-shadow .3s; font-size:16px}
 .fld textarea{min-height:92px; resize:vertical}
-.fld input:focus,.fld textarea:focus{border-color:var(--oak-d); background:var(--white); box-shadow:0 0 0 4px rgba(201,163,90,.18)}
+.fld input:focus,.fld textarea:focus{border-color:var(--oak-d); background:var(--white); box-shadow:0 0 0 4px rgba(248,177,27,.18)}
 .fld.err input{border-color:#b0452e; background:#fdf3f0}
 .fld .emsg{font-size:12.5px; color:#b0452e; display:none}
 .fld.err .emsg{display:block}
@@ -760,7 +766,8 @@ p{margin:0 0 1em}
 /* =========================================================================
    FOOTER
    ========================================================================= */
-.foot{background:#0b0a09; color:var(--muted-d); padding:90px 0 120px; font-size:15px}
+.foot{background:#0b0a09; color:var(--muted-d); padding:90px 0 120px; font-size:15px; position:relative}
+.foot::before{content:""; position:absolute; inset:0 0 auto; height:4px; background:linear-gradient(90deg, var(--tm-red) 0 33.3%, var(--tm-amber) 33.3% 66.6%, var(--tm-teal) 66.6% 100%)}
 .foot-cta{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:30px; padding-bottom:70px; border-bottom:1px solid var(--line-d); margin-bottom:60px}
 .foot-cta h2{color:var(--paper); font-size:clamp(46px, 7vw, 110px); line-height:.95}
 .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px}
@@ -784,7 +791,7 @@ p{margin:0 0 1em}
 .modal.show{opacity:1; visibility:visible}
 .modal-card{position:relative; width:min(520px, 100%); border-radius:var(--r-lg); padding:44px 38px 38px; background:var(--paper); color:var(--text); text-align:center; transform:translateY(30px) scale(.96); transition:transform .6s var(--ease); overflow:hidden}
 .modal.show .modal-card{transform:none}
-.modal-card::before{content:""; position:absolute; inset:0 0 auto; height:6px; background:linear-gradient(90deg, var(--oak-d), var(--brass-l), var(--oak-d))}
+.modal-card::before{content:""; position:absolute; inset:0 0 auto; height:6px; background:linear-gradient(90deg, var(--tm-red) 0 33.3%, var(--tm-amber) 33.3% 66.6%, var(--tm-teal) 66.6% 100%)}
 .modal-card h3{font-size:clamp(28px, 3.4vw, 38px); margin:14px 0 12px}
 .modal-card p{color:var(--muted)}
 .modal-x{position:absolute; top:14px; right:14px; width:40px; height:40px; border-radius:50%; display:grid; place-items:center; font-size:22px; color:var(--muted)}
@@ -825,7 +832,7 @@ p{margin:0 0 1em}
 <header class="nav" id="nav">
   <div class="wrap nav-in">
     <a href="#top" class="logo" aria-label="Taylormade Wardrobes — home">
-      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="10" stroke="#c9a35a" stroke-opacity=".4"/><rect x="10" y="8" width="20" height="24" rx="2" stroke="#c9a35a" stroke-width="2"/><path d="M20 8v24" stroke="#c9a35a" stroke-width="2"/><path d="M17.5 17v5M22.5 17v5" stroke="#c9a35a" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="10" stroke="#f8b11b" stroke-opacity=".4"/><rect x="10" y="8" width="20" height="24" rx="2" stroke="#f8b11b" stroke-width="2"/><path d="M20 8v24" stroke="#f8b11b" stroke-width="2"/><path d="M17.5 17v5M22.5 17v5" stroke="#f8b11b" stroke-width="2" stroke-linecap="round"/></svg>
       <span class="logo-txt"><b>Taylormade</b><small>Wardrobes</small></span>
     </a>
     <nav class="nav-links" aria-label="Main">
@@ -971,7 +978,7 @@ p{margin:0 0 1em}
                 </div>
                 <div class="shoes">
                   <div class="shoe-row"><span class="shoe" style="--c:#2a211b"></span><span class="shoe" style="--c:#b0865a"></span><span class="shoe" style="--c:#f0ebe2"></span><span class="shoe" style="--c:#7a2f24"></span></div>
-                  <div class="shoe-row"><span class="shoe" style="--c:#1d1d1f"></span><span class="shoe" style="--c:#c9a35a"></span><span class="shoe" style="--c:#4b5b6c"></span><span class="shoe" style="--c:#d9cdb9"></span></div>
+                  <div class="shoe-row"><span class="shoe" style="--c:#1d1d1f"></span><span class="shoe" style="--c:#f8b11b"></span><span class="shoe" style="--c:#4b5b6c"></span><span class="shoe" style="--c:#d9cdb9"></span></div>
                 </div>
               </div>
               <!-- col B: shelves -->
@@ -1453,7 +1460,7 @@ p{margin:0 0 1em}
 
           <!-- SUCCESS -->
           <div class="f-step done" data-step="5" role="status">
-            <svg class="tick" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="45" stroke="#c9a35a" stroke-width="4"/><path d="M30 52l13 13 27-29" stroke="#121010" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="tick" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="45" stroke="#f8b11b" stroke-width="4"/><path d="M30 52l13 13 27-29" stroke="#121010" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <h3 id="doneTitle">You're booked in the queue.</h3>
             <p class="muted" id="doneMsg">Thanks — we've got your details and will be in touch within one business day.</p>
             <ol class="next">
@@ -1491,7 +1498,7 @@ p{margin:0 0 1em}
     <div class="foot-grid">
       <div>
         <a href="#top" class="logo" aria-label="Taylormade Wardrobes">
-          <svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="10" stroke="#c9a35a" stroke-opacity=".4"/><rect x="10" y="8" width="20" height="24" rx="2" stroke="#c9a35a" stroke-width="2"/><path d="M20 8v24" stroke="#c9a35a" stroke-width="2"/><path d="M17.5 17v5M22.5 17v5" stroke="#c9a35a" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="10" stroke="#f8b11b" stroke-opacity=".4"/><rect x="10" y="8" width="20" height="24" rx="2" stroke="#f8b11b" stroke-width="2"/><path d="M20 8v24" stroke="#f8b11b" stroke-width="2"/><path d="M17.5 17v5M22.5 17v5" stroke="#f8b11b" stroke-width="2" stroke-linecap="round"/></svg>
           <span class="logo-txt"><b>Taylormade</b><small>Wardrobes</small></span>
         </a>
         <p style="margin-top:20px; max-width:34ch">Custom made-to-measure wardrobes and storage from our Browns Bay workshop to the rest of Auckland. Over 30 years of doing one thing properly.</p>
@@ -1557,9 +1564,9 @@ const CONFIG = {
   EMAIL: "mark.tmwardrobes@gmail.com",
 
   // Your logo file (SVG or transparent PNG works best on the dark header). "" keeps the placeholder mark.
-  LOGO_URL: "https://static.wixstatic.com/media/c48b62_d433c4586084418fa337af70986a0668~mv2.png/v1/fit/w_710,h_212,q_90,enc_auto/c48b62_d433c4586084418fa337af70986a0668~mv2.png",
+  LOGO_URL: "images/logo.png",
   // true = force the logo white (only for a single-colour logo on a transparent background).
-  // false = show the logo in its real colours on a cream nameplate (works for any logo).
+  // false = show the logo exactly as designed (its teal background becomes a rounded badge).
   LOGO_INVERT: false,
   // Your install photos. Add as many as you like; the "Recent installs" section appears once this has entries.
   // { src: "images/walk-in-orewa.jpg", alt: "Oak walk-in wardrobe with LED lighting in Orewa", caption: "Walk-in · Orewa" }
