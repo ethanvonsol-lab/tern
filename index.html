@@ -40,7 +40,7 @@
 <meta name="description" content="Custom wardrobes made to measure in Browns Bay, the North Shore &amp; across Auckland. Walk-in wardrobes, sliding &amp; bifold doors, garage and office storage — 30+ years' experience. Free in-home design consult &amp; fixed-price quote.">
 <link rel="canonical" href="https://www.taylormadewardrobes.co.nz/">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#121010">
+<meta name="theme-color" content="#0d1b1c">
 <link rel="apple-touch-icon" href="images/logo.png">
 <meta name="geo.region" content="NZ-AUK">
 <meta name="geo.placename" content="Browns Bay, Auckland">
@@ -140,14 +140,14 @@
    TOKENS
    ========================================================================= */
 :root{
-  --ink:#121010; --ink-2:#1a1715; --ink-3:#24201c; --ink-4:#2f2a25;
-  --paper:#f7f2ea; --paper-2:#efe6d8; --white:#fffdf9;
+  --ink:#0d1b1c; --ink-2:#112425; --ink-3:#173132; --ink-4:#1f3e3f;
+  --paper:#eef6f5; --paper-2:#dcebe9; --white:#ffffff;
   --oak:#b98a57; --oak-d:#815640; --walnut:#5b3d28;
   --brass:#f8b11b; --brass-l:#fdd27a; --brass-d:#c98a0b;
   /* logo colours */
-  --tm-teal:#88d2d3; --tm-teal-d:#2f8a8c; --tm-red:#ed1c24; --tm-amber:#f8b11b; --tm-grey:#6d6c71; --tm-brown:#815640;
-  --text:#1b1815; --muted:#6d6c71; --muted-d:#a79d90;
-  --line:rgba(27,24,21,.12); --line-d:rgba(255,246,230,.12);
+  --tm-teal:#88d2d3; --tm-teal-d:#2f8a8c; --tm-teal-dd:#1d6b6d; --tm-red:#ed1c24; --tm-red-d:#d01820; --tm-amber:#f8b11b; --tm-grey:#6d6c71; --tm-brown:#815640;
+  --text:#14201f; --muted:#6d6c71; --muted-d:#a3b8b7;
+  --line:rgba(13,27,28,.12); --line-d:rgba(220,240,238,.13);
   --ok:#2f8a8c;
   --r:16px; --r-lg:28px;
   --ease:cubic-bezier(.22,1,.36,1);
@@ -192,11 +192,11 @@ h1,h2,h3,h4{font-family:var(--f-display); font-weight:400; line-height:1.02; let
 h2{font-size:clamp(40px, 6.2vw, 88px)}
 h3{font-size:clamp(24px, 2.3vw, 32px); line-height:1.1}
 h2 em, h1 em, h3 em{font-style:italic; color:var(--brass)}
-.light h2 em, .white h2 em{color:var(--oak-d)}
+.light h2 em, .white h2 em{color:var(--tm-teal-dd)}
 p{margin:0 0 1em}
 .lede{font-size:clamp(18px, 1.5vw, 21px); line-height:1.55; max-width:60ch}
 .eyebrow{display:inline-flex; align-items:center; gap:10px; font-size:12.5px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--brass)}
-.light .eyebrow, .white .eyebrow{color:var(--oak-d)}
+.light .eyebrow, .white .eyebrow{color:var(--tm-teal-dd)}
 .eyebrow::before{content:""; width:30px; height:4px; border-radius:2px; background:linear-gradient(90deg, var(--tm-red) 0 33.3%, var(--tm-amber) 33.3% 66.6%, var(--tm-teal) 66.6% 100%)}
 .sec-head{display:grid; gap:22px; margin-bottom:clamp(48px, 6vw, 84px); max-width:900px}
 .sec-head.center{margin-inline:auto; text-align:center; justify-items:center}
@@ -237,7 +237,7 @@ p{margin:0 0 1em}
    ========================================================================= */
 .nav{position:fixed; inset:0 0 auto 0; z-index:100; transition:transform .5s var(--ease), background .4s, box-shadow .4s, backdrop-filter .4s}
 .nav-in{display:flex; align-items:center; gap:28px; height:84px}
-.nav.scrolled{background:rgba(18,16,16,.9); backdrop-filter:blur(16px) saturate(1.3); -webkit-backdrop-filter:blur(16px) saturate(1.3); box-shadow:0 1px 0 var(--line-d)}
+.nav.scrolled{background:rgba(13,27,28,.9); backdrop-filter:blur(16px) saturate(1.3); -webkit-backdrop-filter:blur(16px) saturate(1.3); box-shadow:0 1px 0 var(--line-d)}
 .nav.hide{transform:translateY(-100%)}
 .logo{display:flex; align-items:center; gap:12px; color:var(--paper)}
 .logo-mark{width:38px; height:38px}
@@ -268,12 +268,12 @@ p{margin:0 0 1em}
    HERO
    ========================================================================= */
 .hero{min-height:100svh; display:flex; align-items:center; padding:130px 0 90px; background:
-  radial-gradient(1200px 700px at 78% 30%, rgba(248,177,27,.16), transparent 60%),
-  radial-gradient(900px 600px at 10% 90%, rgba(185,138,87,.10), transparent 60%),
+  radial-gradient(1200px 700px at 78% 30%, rgba(136,210,211,.20), transparent 60%),
+  radial-gradient(900px 600px at 10% 90%, rgba(248,177,27,.10), transparent 60%),
   var(--ink); color:var(--paper); overflow:hidden}
 .hero-lines{position:absolute; inset:0; display:grid; grid-template-columns:repeat(6, 1fr); pointer-events:none; max-width:var(--max); margin:0 auto; padding:0 var(--gut)}
-.hero-lines i{border-left:1px solid rgba(255,246,230,.05); transform-origin:top; animation:lineDraw 1.8s var(--ease) both}
-.hero-lines i:last-child{border-right:1px solid rgba(255,246,230,.05)}
+.hero-lines i{border-left:1px solid rgba(220,240,238,.05); transform-origin:top; animation:lineDraw 1.8s var(--ease) both}
+.hero-lines i:last-child{border-right:1px solid rgba(220,240,238,.05)}
 .hero-lines i:nth-child(2){animation-delay:.1s} .hero-lines i:nth-child(3){animation-delay:.2s} .hero-lines i:nth-child(4){animation-delay:.3s} .hero-lines i:nth-child(5){animation-delay:.4s} .hero-lines i:nth-child(6){animation-delay:.5s}
 @keyframes lineDraw{from{transform:scaleY(0)} to{transform:scaleY(1)}}
 .hero-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:clamp(32px, 5vw, 80px); align-items:center; position:relative; z-index:2}
@@ -308,7 +308,7 @@ p{margin:0 0 1em}
 .badge svg{position:absolute; inset:0; animation:spin 22s linear infinite; color:var(--paper); z-index:1}
 .badge b{position:relative; z-index:2; font-family:var(--f-display); font-size:40px; font-weight:400; color:var(--brass); line-height:1; text-align:center}
 .badge b small{display:block; font-family:var(--f-body); font-size:10px; letter-spacing:.2em; color:var(--paper); font-weight:700; margin-top:2px}
-.badge::before{content:""; position:absolute; inset:14px; border-radius:50%; background:rgba(18,16,16,.8); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border:1px solid var(--line-d)}
+.badge::before{content:""; position:absolute; inset:14px; border-radius:50%; background:rgba(13,27,28,.8); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); border:1px solid var(--line-d)}
 @keyframes spin{to{transform:rotate(360deg)}}
 .float-card{position:absolute; right:-2%; bottom:-2%; z-index:6; display:flex; gap:12px; align-items:center; padding:14px 18px 14px 14px; border-radius:18px; background:rgba(255,253,249,.92); color:var(--text); box-shadow:0 24px 50px -20px rgba(0,0,0,.7); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); animation:float2 8s ease-in-out infinite; max-width:270px}
 .float-card .ic{flex:none; width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background:var(--ink); color:var(--brass)}
@@ -361,7 +361,7 @@ p{margin:0 0 1em}
    ANATOMY (pinned wardrobe)
    ========================================================================= */
 .anat{height:360vh; background:
-  radial-gradient(900px 600px at 70% 50%, rgba(248,177,27,.12), transparent 65%), var(--ink); color:var(--paper)}
+  radial-gradient(900px 600px at 70% 50%, rgba(136,210,211,.16), transparent 65%), var(--ink); color:var(--paper)}
 .anat-pin{position:sticky; top:0; height:100svh; display:flex; align-items:center; overflow:hidden}
 .anat .sec-copy{position:relative; z-index:10}
 .anat-grid{display:grid; grid-template-columns:.8fr 1.2fr; gap:clamp(30px, 4vw, 60px); align-items:center; width:100%}
@@ -455,8 +455,8 @@ p{margin:0 0 1em}
 .card.photo{color:var(--paper); background:var(--ink); border-color:transparent; justify-content:flex-end; min-height:300px}
 .card.photo img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2; transform:scale(1.04); transition:transform 1.4s var(--ease)}
 .card.photo:hover img{transform:scale(1.1)}
-.card.photo::after{content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(180deg, rgba(18,16,16,0) 25%, rgba(18,16,16,.55) 55%, rgba(18,16,16,.92) 100%)}
-.card.photo .ic{position:absolute; top:22px; left:22px; background:rgba(18,16,16,.55); color:var(--brass); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); margin:0}
+.card.photo::after{content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(180deg, rgba(13,27,28,0) 25%, rgba(13,27,28,.55) 55%, rgba(13,27,28,.92) 100%)}
+.card.photo .ic{position:absolute; top:22px; left:22px; background:rgba(13,27,28,.55); color:var(--brass); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); margin:0}
 .card.photo h3{margin:0 0 10px}
 .card.photo p{color:rgba(247,242,234,.82); margin-bottom:16px}
 .card.photo .link-arrow{color:var(--brass)}
@@ -522,8 +522,8 @@ p{margin:0 0 1em}
 .step .tag{position:absolute; top:34px; right:34px; font-size:12px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--ink); background:var(--brass); padding:7px 12px; border-radius:999px}
 .step svg.art{position:absolute; right:-20px; top:90px; width:220px; height:220px; color:rgba(248,177,27,.18)}
 .step.final{background:linear-gradient(160deg, var(--brass), #b58f47); color:var(--ink)}
-.step.final p{color:rgba(18,16,16,.75)}
-.step.final .n{-webkit-text-stroke:1px rgba(18,16,16,.45)}
+.step.final p{color:rgba(13,27,28,.75)}
+.step.final .n{-webkit-text-stroke:1px rgba(13,27,28,.45)}
 .step.final .btn{margin-top:26px; align-self:flex-start}
 .hs-bar{margin:40px var(--gut) 0; height:2px; background:var(--line-d); position:relative; max-width:calc(var(--max) - 2 * var(--gut))}
 .hs-bar i{position:absolute; inset:0; background:var(--brass); transform-origin:0 50%; transform:scaleX(0)}
@@ -541,7 +541,7 @@ p{margin:0 0 1em}
 .est{display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(20px, 3vw, 40px); align-items:stretch}
 .est-form{background:var(--white); border:1px solid var(--line); border-radius:var(--r-lg); padding:clamp(24px, 3vw, 40px); display:grid; gap:30px}
 .q-label{display:flex; justify-content:space-between; align-items:baseline; font-weight:800; font-size:14px; letter-spacing:.08em; text-transform:uppercase; margin-bottom:14px}
-.q-label output{font-family:var(--f-display); font-size:26px; letter-spacing:-.01em; text-transform:none; font-weight:500; color:var(--oak-d)}
+.q-label output{font-family:var(--f-display); font-size:26px; letter-spacing:-.01em; text-transform:none; font-weight:500; color:var(--tm-teal-dd)}
 .chips{display:grid; grid-template-columns:repeat(2, 1fr); gap:10px}
 .chip{position:relative}
 .chip input{position:absolute; opacity:0; pointer-events:none}
@@ -550,13 +550,13 @@ p{margin:0 0 1em}
 .chip input:checked + label{border-color:var(--ink); background:var(--ink); color:var(--paper)}
 .chip input:focus-visible + label{outline:2px solid var(--brass); outline-offset:2px}
 .chip .dot{width:22px; height:22px; border-radius:7px; flex:none; box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
-.range{-webkit-appearance:none; appearance:none; width:100%; height:6px; border-radius:6px; background:linear-gradient(90deg, var(--oak-d) var(--p, 30%), var(--paper-2) var(--p, 30%)); outline:none}
+.range{-webkit-appearance:none; appearance:none; width:100%; height:6px; border-radius:6px; background:linear-gradient(90deg, var(--tm-teal-dd) var(--p, 30%), var(--paper-2) var(--p, 30%)); outline:none}
 .range::-webkit-slider-thumb{-webkit-appearance:none; width:30px; height:30px; border-radius:50%; background:var(--ink); border:4px solid var(--brass); cursor:grab; box-shadow:0 6px 14px rgba(0,0,0,.25); transition:transform .2s}
 .range::-webkit-slider-thumb:active{transform:scale(1.15); cursor:grabbing}
 .range::-moz-range-thumb{width:24px; height:24px; border-radius:50%; background:var(--ink); border:4px solid var(--brass); cursor:grab}
 .range-scale{display:flex; justify-content:space-between; font-size:12.5px; color:var(--muted); margin-top:10px}
 .est-out{position:sticky; top:100px; align-self:start; background:var(--ink); color:var(--paper); border-radius:var(--r-lg); padding:clamp(26px, 3vw, 44px); overflow:hidden; isolation:isolate}
-.est-out::before{content:""; position:absolute; width:500px; height:500px; right:-200px; top:-200px; background:radial-gradient(circle, rgba(248,177,27,.25), transparent 65%); z-index:-1}
+.est-out::before{content:""; position:absolute; width:500px; height:500px; right:-200px; top:-200px; background:radial-gradient(circle, rgba(136,210,211,.28), transparent 65%); z-index:-1}
 .preview{height:170px; display:flex; align-items:flex-end; justify-content:center; margin-bottom:26px; border-bottom:1px solid var(--line-d); padding-bottom:18px}
 .pv{height:140px; display:flex; gap:3px; padding:5px; border-radius:6px; background:#8a6238; transition:width .6s var(--ease); box-shadow:0 20px 40px -18px rgba(0,0,0,.8)}
 .pv i{flex:1; border-radius:2px; position:relative; transition:background .5s}
@@ -595,7 +595,7 @@ p{margin:0 0 1em}
 .style .meta small{display:block; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--brass); font-weight:800; margin-bottom:6px}
 .style .go{flex:none; width:46px; height:46px; border-radius:50%; background:var(--brass); color:var(--ink); display:grid; place-items:center; transform:scale(.6) rotate(-45deg); opacity:0; transition:all .6s var(--ease)}
 .style:hover .go{transform:scale(1) rotate(0); opacity:1}
-.style .bg{position:absolute; inset:0; z-index:-2; background:var(--wall, linear-gradient(#2b2621,#1d1a17))}
+.style .bg{position:absolute; inset:0; z-index:-2; background:var(--wall, linear-gradient(#1c3536,#112425))}
 .styles-note{margin-top:22px; font-size:13.5px}
 @media (max-width:900px){ .styles{grid-template-columns:1fr 1fr} }
 @media (max-width:560px){ .styles{grid-template-columns:1fr} .style{aspect-ratio:5/4} .style .front{inset:8% 22% 26%} .style .inside{inset:calc(8% + 6px) calc(22% + 6px) calc(26% + 6px)} }
@@ -613,7 +613,7 @@ p{margin:0 0 1em}
 .gal img{width:100%; height:100%; object-fit:cover; transform:scale(1.08); transition:transform 1.4s var(--ease)}
 .gal figure.in img, .gal figure:hover img{transform:scale(1)}
 .gal figure:hover img{transform:scale(1.04)}
-.gal figcaption{position:absolute; left:14px; bottom:14px; padding:8px 14px; border-radius:999px; background:rgba(18,16,16,.72); color:var(--paper); font-size:13px; font-weight:700; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px)}
+.gal figcaption{position:absolute; left:14px; bottom:14px; padding:8px 14px; border-radius:999px; background:rgba(13,27,28,.72); color:var(--paper); font-size:13px; font-weight:700; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px)}
 .logo-img{height:44px; width:auto; max-width:200px; object-fit:contain}
 .logo.plate .logo-img{height:52px; max-width:none; border-radius:10px; box-shadow:0 10px 26px -12px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.08)}
 .foot .logo.plate .logo-img{height:64px}
@@ -642,7 +642,7 @@ p{margin:0 0 1em}
 /* =========================================================================
    GUARANTEE
    ========================================================================= */
-.promise{background:linear-gradient(135deg, #1a1612, #0f0d0b); color:var(--paper); border-radius:var(--r-lg); padding:clamp(34px, 5vw, 80px); display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(30px, 5vw, 80px); position:relative; overflow:hidden; border:1px solid rgba(248,177,27,.25)}
+.promise{background:linear-gradient(135deg, #17494a, #0b1d1e 70%); color:var(--paper); border-radius:var(--r-lg); padding:clamp(34px, 5vw, 80px); display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(30px, 5vw, 80px); position:relative; overflow:hidden; border:1px solid rgba(248,177,27,.25)}
 .promise::before{content:""; position:absolute; inset:-1px; border-radius:inherit; padding:1px; background:conic-gradient(from var(--a, 0deg), transparent 0 70%, var(--brass) 85%, transparent 100%); -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude; animation:rot 6s linear infinite; pointer-events:none}
 @property --a{syntax:'<angle>'; initial-value:0deg; inherits:false}
 @keyframes rot{to{--a:360deg}}
@@ -674,7 +674,7 @@ p{margin:0 0 1em}
 .qa .pm{flex:none; width:40px; height:40px; border-radius:50%; border:1px solid var(--line); position:relative; transition:background .4s, border-color .4s, transform .6s var(--ease)}
 .qa .pm::before,.qa .pm::after{content:""; position:absolute; left:50%; top:50%; width:14px; height:1.5px; background:currentColor; transform:translate(-50%,-50%)}
 .qa .pm::after{transform:translate(-50%,-50%) rotate(90deg); transition:transform .5s var(--ease)}
-.qa[open] .pm{background:var(--ink); color:var(--brass); border-color:var(--ink); transform:rotate(180deg)}
+.qa[open] .pm{background:var(--tm-teal); color:var(--ink); border-color:var(--tm-teal); transform:rotate(180deg)}
 .qa[open] .pm::after{transform:translate(-50%,-50%) rotate(0)}
 .qa .ans{overflow:hidden}
 .qa .ans p{padding:0 60px 26px 0; color:var(--muted); margin:0}
@@ -684,8 +684,8 @@ p{margin:0 0 1em}
    QUOTE FUNNEL
    ========================================================================= */
 .quote{background:
-  radial-gradient(1000px 600px at 15% 20%, rgba(248,177,27,.14), transparent 60%),
-  radial-gradient(800px 500px at 90% 90%, rgba(185,138,87,.10), transparent 60%), var(--ink); color:var(--paper)}
+  radial-gradient(1000px 600px at 15% 20%, rgba(136,210,211,.18), transparent 60%),
+  radial-gradient(800px 500px at 90% 90%, rgba(248,177,27,.10), transparent 60%), var(--ink); color:var(--paper)}
 .quote-grid{display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(30px, 5vw, 80px); align-items:start}
 .quote h2{font-size:clamp(44px, 5.6vw, 84px)}
 .offer{list-style:none; margin:34px 0 0; padding:0; display:grid; gap:0}
@@ -724,7 +724,7 @@ p{margin:0 0 1em}
 .opt label:hover{border-color:rgba(138,98,56,.55); transform:translateY(-2px); box-shadow:0 14px 30px -18px rgba(60,40,20,.4)}
 .opt input:checked + label{border-color:var(--ink); background:var(--ink); color:var(--paper)}
 .opt input:focus-visible + label{outline:2px solid var(--brass); outline-offset:2px}
-.opt svg{width:28px; height:28px; color:var(--oak-d)}
+.opt svg{width:28px; height:28px; color:var(--tm-teal-dd)}
 .opt input:checked + label svg{color:var(--brass)}
 .opt b{font-size:16px; line-height:1.25}
 .opt small{font-size:13px; color:var(--muted); line-height:1.35}
@@ -766,7 +766,7 @@ p{margin:0 0 1em}
 /* =========================================================================
    FOOTER
    ========================================================================= */
-.foot{background:#0b0a09; color:var(--muted-d); padding:90px 0 120px; font-size:15px; position:relative}
+.foot{background:#081415; color:var(--muted-d); padding:90px 0 120px; font-size:15px; position:relative}
 .foot::before{content:""; position:absolute; inset:0 0 auto; height:4px; background:linear-gradient(90deg, var(--tm-red) 0 33.3%, var(--tm-amber) 33.3% 66.6%, var(--tm-teal) 66.6% 100%)}
 .foot-cta{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:30px; padding-bottom:70px; border-bottom:1px solid var(--line-d); margin-bottom:60px}
 .foot-cta h2{color:var(--paper); font-size:clamp(46px, 7vw, 110px); line-height:.95}
@@ -781,7 +781,7 @@ p{margin:0 0 1em}
 /* =========================================================================
    STICKY MOBILE CTA + EXIT MODAL
    ========================================================================= */
-.mbar{position:fixed; left:12px; right:12px; bottom:calc(12px + env(safe-area-inset-bottom)); z-index:90; display:none; grid-template-columns:auto 1fr; gap:10px; padding:8px; border-radius:999px; background:rgba(18,16,16,.88); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); box-shadow:0 20px 40px -10px rgba(0,0,0,.6); transform:translateY(150%); transition:transform .6s var(--ease)}
+.mbar{position:fixed; left:12px; right:12px; bottom:calc(12px + env(safe-area-inset-bottom)); z-index:90; display:none; grid-template-columns:auto 1fr; gap:10px; padding:8px; border-radius:999px; background:rgba(13,27,28,.88); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); box-shadow:0 20px 40px -10px rgba(0,0,0,.6); transform:translateY(150%); transition:transform .6s var(--ease)}
 .mbar.show{transform:none}
 .mbar a.call{display:grid; place-items:center; width:52px; height:52px; border-radius:50%; background:var(--ink-4); color:var(--brass)}
 .mbar .btn{padding:14px 20px; font-size:15px}
@@ -812,6 +812,64 @@ p{margin:0 0 1em}
 .js .split.in .wi{transform:none}
 .js .clip{clip-path:inset(0 0 100% 0); transition:clip-path 1.4s var(--ease-io)}
 .js .clip.in{clip-path:inset(0 0 0 0)}
+
+
+/* =========================================================================
+   BRAND COLOUR SYSTEM — teal = brand, amber = action, red = punctuation
+   ========================================================================= */
+.c-red{--c:var(--tm-red); --on:#fff} .c-amber{--c:var(--tm-amber); --on:var(--ink)} .c-teal{--c:var(--tm-teal); --on:var(--ink)}
+/* pain cards: logo-bar top edge */
+.pain{border-top:6px solid var(--c, var(--tm-red))}
+.pain:nth-child(1){--c:var(--tm-red)} .pain:nth-child(2){--c:var(--tm-amber)} .pain:nth-child(3){--c:var(--tm-teal)}
+.pain .num{color:var(--text); font-weight:600}
+/* stats: Mondrian top bars */
+.stats{border-top:0; gap:0 24px}
+.stat{border-right:0; border-top:6px solid var(--c); padding:30px 0 0 0!important}
+.stat:nth-child(1){--c:var(--tm-red)} .stat:nth-child(2){--c:var(--tm-amber)} .stat:nth-child(3){--c:var(--tm-teal)} .stat:nth-child(4){--c:var(--tm-brown)}
+.stat:nth-child(1) b sup{color:var(--tm-red)} .stat:nth-child(2) b sup{color:var(--tm-teal-dd)}
+@media (max-width:800px){ .stats{gap:26px 20px} }
+/* wardrobe anatomy: numbers + hotspots share a colour */
+.feat-list li:nth-child(3n+1){--c:var(--tm-red); --on:#fff} .feat-list li:nth-child(3n+2){--c:var(--tm-amber); --on:var(--ink)} .feat-list li:nth-child(3n){--c:var(--tm-teal); --on:var(--ink)}
+.feat-list li::before{color:var(--c)}
+.feat-list li.on{box-shadow:inset 4px 0 0 var(--c); padding-left:14px; margin-left:-14px}
+.hot:nth-of-type(3n+1){--c:var(--tm-red-d); --on:#fff} .hot:nth-of-type(3n+2){--c:var(--tm-amber); --on:var(--ink)} .hot:nth-of-type(3n){--c:var(--tm-teal); --on:var(--ink)}
+.hot{background:var(--c); color:var(--on)} .hot::after{border-color:var(--c)}
+.hot.on{background:var(--c); box-shadow:0 0 0 4px rgba(255,255,255,.9)}
+/* service cards: logo-colour icon tiles */
+.card.photo .ic{background:var(--c, var(--tm-amber)); color:var(--on, var(--ink)); backdrop-filter:none; -webkit-backdrop-filter:none}
+.card.photo{border-bottom:6px solid var(--c, var(--tm-amber))}
+/* process steps */
+.step:nth-of-type(1){--c:var(--tm-red)} .step:nth-of-type(2){--c:var(--tm-amber)} .step:nth-of-type(3){--c:var(--tm-teal)}
+.step .n{-webkit-text-stroke:1.5px var(--c)}
+.step:not(.final){border-top:6px solid var(--c)}
+.step svg.art{color:var(--c); opacity:.22}
+.step .tag{background:var(--tm-teal); color:var(--ink)}
+/* comparison: full teal section */
+#compare{background:var(--tm-teal)}
+#compare .eyebrow{color:var(--ink)}
+#compare h2 em{color:var(--ink)}
+#compare .eyebrow::before{background:linear-gradient(90deg, var(--tm-red) 0 33.3%, var(--tm-amber) 33.3% 66.6%, var(--ink) 66.6% 100%)}
+#compare .cmp{border-color:transparent; box-shadow:0 40px 80px -40px rgba(13,27,28,.55)}
+#compare .cmp-foot p{color:var(--ink)}
+.cmp thead th.us{background:var(--ink); color:var(--tm-amber); box-shadow:inset 0 5px 0 var(--tm-amber)}
+.cmp td.us{background:rgba(248,177,27,.12)}
+.yes{background:var(--tm-teal); color:var(--ink)}
+/* promise card (dark, inside a light section) */
+.light .promise .eyebrow, .light .promise h2 em{color:var(--tm-amber)}
+.promise-list li:nth-child(1){--c:var(--tm-red)} .promise-list li:nth-child(2){--c:var(--tm-amber)} .promise-list li:nth-child(3){--c:var(--tm-teal)} .promise-list li:nth-child(4){--c:var(--tm-amber)}
+.promise-list .pi{background:var(--c); color:var(--ink)}
+.promise-list li:nth-child(1) .pi{color:#fff}
+/* quote funnel */
+.opt input:checked + label svg{color:var(--tm-amber)}
+.opt .pop{background:var(--tm-red-d); color:#fff}
+.wk-tag{color:var(--tm-amber)}
+/* hero: the logo's bars as floating blocks */
+.blk{position:absolute; border-radius:6px; will-change:transform; box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.blk-brown{left:-6%; top:-2%; width:15%; height:12%; background:var(--tm-brown); animation:float3 11s ease-in-out infinite}
+.blk-amber{left:-6%; top:12%; width:15%; height:12%; background:var(--tm-amber); animation:float1 9s ease-in-out infinite}
+.blk-red{left:-6%; top:26%; width:46%; height:9%; background:var(--tm-red); animation:float2 12s ease-in-out infinite}
+.blk-teal{right:-5%; bottom:12%; width:24%; height:20%; background:var(--tm-teal); animation:float4 10s ease-in-out infinite}
+@media (max-width:960px){ .blk-brown,.blk-amber,.blk-red{left:2%} .blk-teal{right:2%} }
 
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:.001ms!important; animation-iteration-count:1!important; transition-duration:.001ms!important; scroll-behavior:auto!important}
@@ -888,6 +946,8 @@ p{margin:0 0 1em}
     </div>
 
     <div class="hv" data-reveal="scale" style="--d:.2s" aria-hidden="true">
+      <span class="blk blk-teal" data-depth="10"></span>
+      <span class="blk blk-brown" data-depth="52"></span><span class="blk blk-amber" data-depth="52"></span><span class="blk blk-red" data-depth="52"></span>
       <div class="sw sw-oak" data-depth="18"><span>Natural oak</span><i class="pull"></i></div>
       <div class="sw sw-walnut" data-depth="34"><span>Walnut</span><i class="pull"></i></div>
       <div class="sw sw-white" data-depth="26"><span>Soft white</span></div>
@@ -1028,7 +1088,7 @@ p{margin:0 0 1em}
     </div>
 
     <div class="bento">
-      <article class="card photo c-walk" data-tilt data-reveal style="--d:0s">
+      <article class="card photo c-walk c-amber" data-tilt data-reveal style="--d:0s">
         <img src="https://static.wixstatic.com/media/c48b62_2a73076e406b489db61dda6f0be4074d~mv2.jpg/v1/fill/w_1400,h_1100,al_c,q_85,enc_auto/c48b62_2a73076e406b489db61dda6f0be4074d~mv2.jpg" alt="Custom walk-in wardrobe built by Taylormade Wardrobes" loading="lazy" decoding="async">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v17M3 21h18M8 7h8M12 3v18"/></svg></span>
         <span class="wk-tag">★ MOST REQUESTED</span>
@@ -1036,35 +1096,35 @@ p{margin:0 0 1em}
         <p>Your own boutique at home. Open shelving, hanging, drawer banks and a place for absolutely everything — laid out around how you get ready.</p>
         <a href="#quote" class="link-arrow" data-prefill="walkin">Design my walk-in →</a>
       </article>
-      <article class="card photo c-sq" data-tilt data-reveal style="--d:.08s">
+      <article class="card photo c-sq c-teal" data-tilt data-reveal style="--d:.08s">
         <img src="https://static.wixstatic.com/media/c48b62_89330ab4c70b4a0ebdd98bdea5a3de6b~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_auto/c48b62_89330ab4c70b4a0ebdd98bdea5a3de6b~mv2.jpg" alt="Sliding wardrobe door with mirror insert" loading="lazy" decoding="async">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="10" height="18" rx="1"/><rect x="11" y="3" width="10" height="18" rx="1"/></svg></span>
         <h3>Sliding Doors</h3>
         <p>Smooth, quiet sliders — mirror inserts, timber-look or colour. New or replacing tired old doors.</p>
         <a href="#quote" class="link-arrow" data-prefill="doors">Get a price →</a>
       </article>
-      <article class="card photo c-sq" data-tilt data-reveal style="--d:.16s">
+      <article class="card photo c-sq c-red" data-tilt data-reveal style="--d:.16s">
         <img src="https://static.wixstatic.com/media/c48b62_252d8d7da402454087e4945206374ce0~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_auto/c48b62_252d8d7da402454087e4945206374ce0~mv2.jpg" alt="Bifold wardrobe doors by Taylormade Wardrobes" loading="lazy" decoding="async">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 3v18l5-2V5zM9 5l5-2v18l-5-2M14 3h6v18h-6"/></svg></span>
         <h3>Bifold Doors</h3>
         <p>Full access to the whole wardrobe at once — perfect where a slider won't fit.</p>
         <a href="#quote" class="link-arrow" data-prefill="doors">Get a price →</a>
       </article>
-      <article class="card photo c-sq" data-tilt data-reveal style="--d:.08s">
+      <article class="card photo c-sq c-amber" data-tilt data-reveal style="--d:.08s">
         <img src="https://static.wixstatic.com/media/c48b62_cd9f0726889b459bbc564e9ce777598f~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_auto/c48b62_cd9f0726889b459bbc564e9ce777598f~mv2.jpg" alt="Wardrobe accessory drawers built by Taylormade Wardrobes" loading="lazy" decoding="async">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M3 15h18M10 6h4M10 12h4M10 18h4"/></svg></span>
         <h3>Accessory Drawers</h3>
         <p>Drawers for watches, jewellery, belts and ties — everything with its own spot.</p>
         <a href="#quote" class="link-arrow" data-prefill="interior">Upgrade my interior →</a>
       </article>
-      <article class="card photo c-sq" data-tilt data-reveal style="--d:.16s">
+      <article class="card photo c-sq c-teal" data-tilt data-reveal style="--d:.16s">
         <img src="https://static.wixstatic.com/media/c48b62_a05a4de8869b419582d8c9c9ee150bed~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_auto/c48b62_a05a4de8869b419582d8c9c9ee150bed~mv2.jpg" alt="Custom garage storage by Taylormade Wardrobes" loading="lazy" decoding="async">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V9l9-6 9 6v12"/><path d="M7 21v-8h10v8M7 17h10"/></svg></span>
         <h3>Garage Storage</h3>
         <p>Get the tools, bikes and boxes off the floor and the car back in the garage.</p>
         <a href="#quote" class="link-arrow" data-prefill="storage">Sort my garage →</a>
       </article>
-      <article class="card photo c-sq" data-tilt data-reveal style="--d:.24s">
+      <article class="card photo c-sq c-red" data-tilt data-reveal style="--d:.24s">
         <img src="https://static.wixstatic.com/media/c48b62_55ec51eb132b43b1bb77442dd215c2da~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85,enc_auto/c48b62_55ec51eb132b43b1bb77442dd215c2da~mv2.jpg" alt="Custom office storage by Taylormade Wardrobes" loading="lazy" decoding="async">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M12 16v4"/></svg></span>
         <h3>Office Storage</h3>
